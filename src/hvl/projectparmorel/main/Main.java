@@ -14,18 +14,17 @@ import org.eclipse.emf.ecore.impl.EClassImpl;
 import org.eclipse.emf.ecore.impl.EDataTypeImpl;
 import org.eclipse.emf.ecore.impl.EEnumImpl;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import hvl.projectparmorel.ml.Error;
 import hvl.projectparmorel.ml.ErrorExtractor;
-import hvl.projectparmorel.ml.QLearning;
+import hvl.projectparmorel.ml.ModelFixer;
+import hvl.projectparmorel.ml.QModelFixer;
 
 public class Main {
 
 	public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException,
 			InvocationTargetException, IOException, NoSuchMethodException, SecurityException {
 
-		QLearning ql = new QLearning(createTags(0));
-		ql.loadKnowledge();
+		ModelFixer ql = new QModelFixer(createTags(0));
 		long startTimeT = System.currentTimeMillis();
 		long endTimeT = 0;
 		String root = "././mutants/";
@@ -33,6 +32,7 @@ public class Main {
 		File folder = new File(root);
 		File[] listOfFiles = folder.listFiles();
 		for (int i = 0; i < listOfFiles.length; i++) {
+//			if(listOfFiles[i].getName().equals("b10.ecore")) {
 			// invert mutant order
 			// for (int i = listOfFiles.length-1; i >=0; i--) {
 
@@ -49,10 +49,11 @@ public class Main {
 			URI uri = URI.createFileURI(dest.getAbsolutePath());
 //			ql.resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore",
 //					new EcoreResourceFactoryImpl());
-			Resource myMetaModel = ql.getResourceSet().getResource(uri, true);
+			Resource myMetaModel = ql.getModel(uri);
 
-			Resource auxModel = ql.getResourceSet().createResource(uri);
-			auxModel.getContents().addAll(EcoreUtil.copyAll(myMetaModel.getContents()));
+			Resource auxModel = ql.copy(myMetaModel, uri);
+//			Resource auxModel = ql.getResourceSet().createResource(uri);
+//			auxModel.getContents().addAll(EcoreUtil.copyAll(myMetaModel.getContents()));
 
 			EPackage epa = (EPackage) auxModel.getContents().get(0);
 			System.out.println("Num. Classes: " + epa.getEClassifiers().size());
@@ -92,19 +93,20 @@ public class Main {
 			System.out.println("Size= " + errors.size());
 			System.out.println();
 
-			System.out.println("PREFERENCES: " + ql.getPreferences().toString());
+//			System.out.println("PREFERENCES: " + ql.getPreferences().toString());
 			ql.fixModel(myMetaModel, uri);
 
 			endTime = System.currentTimeMillis();
 			long timeneeded = (endTime - startTime);
 			System.out.println("TOTAL TIME: " + timeneeded);
+//			}
 		}
 
 		System.out.println("COMPLETELY FINISHED!!!!!!");
 		endTimeT = System.currentTimeMillis();
 		long timeneededT = (endTimeT - startTimeT);
 		System.out.println("TOTAL EXECUTION TIME: " + timeneededT);
-		ql.saveKnowledge();
+//		ql.saveKnowledge();
 		System.exit(0);
 	}
 	
