@@ -12,10 +12,10 @@ import javax.swing.*;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import hvl.projectparmorel.ml.Error;
 import hvl.projectparmorel.ml.ErrorExtractor;
-import hvl.projectparmorel.ml.QLearning;
+import hvl.projectparmorel.ml.ModelFixer;
+import hvl.projectparmorel.ml.QModelFixer;
 import hvl.projectparmorel.ml.Sequence;
 
 public class GUI extends JPanel {
@@ -40,7 +40,7 @@ public class GUI extends JPanel {
 	static JFrame frame;
 	JPanel newPanel = new JPanel();
 	private URI uri;
-	private QLearning ql;
+	private ModelFixer ql;
 	List<Error> errors = null;
 	Resource auxModel;
 	Resource myMetaModel;
@@ -73,7 +73,7 @@ public class GUI extends JPanel {
 	}
 
 	public GUI() {
-		ql = new QLearning();
+		ql = new QModelFixer();
 		// construct components
 		importButton = new JButton("Import model");
 		repairButton = new JButton("Repair");
@@ -202,11 +202,11 @@ public class GUI extends JPanel {
 		uri = URI.createFileURI(dest.getAbsolutePath());
 //		ql.resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore",
 //				new EcoreResourceFactoryImpl());
-		myMetaModel = ql.getResourceSet().getResource(uri, true);
+		myMetaModel = ql.getModel(uri);
 
-		Resource auxModel = ql.getResourceSet().createResource(uri);
-		auxModel.getContents().addAll(EcoreUtil.copyAll(myMetaModel.getContents()));
-
+//		Resource auxModel = ql.getResourceSet().createResource(uri);
+//		auxModel.getContents().addAll(EcoreUtil.copyAll(myMetaModel.getContents()));
+		Resource auxModel = ql.copy(myMetaModel, uri);
 		
 		errors = ErrorExtractor.extractErrorsFrom(auxModel);
 //		ql.nuQueue = errors;
