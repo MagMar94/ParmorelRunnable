@@ -6,17 +6,27 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.swing.*;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import hvl.projectparmorel.ml.Error;
-import hvl.projectparmorel.ml.ErrorExtractor;
-import hvl.projectparmorel.ml.ModelFixer;
-import hvl.projectparmorel.ml.QModelFixer;
-import hvl.projectparmorel.ml.Sequence;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
+
+import hvl.projectparmorel.ecore.EcoreErrorExtractor;
+import hvl.projectparmorel.ecore.EcoreQModelFixer;
+import hvl.projectparmorel.general.ErrorExtractor;
+import hvl.projectparmorel.general.ModelFixer;
+import hvl.projectparmorel.modelrepair.Solution;
+import hvl.projectparmorel.general.Error;
 
 public class GUI extends JPanel {
 
@@ -41,7 +51,7 @@ public class GUI extends JPanel {
 	JPanel newPanel = new JPanel();
 	private URI uri;
 	private ModelFixer ql;
-	List<Error> errors = null;
+	List<Error> errors;
 	Resource auxModel;
 	Resource myMetaModel;
 
@@ -73,7 +83,7 @@ public class GUI extends JPanel {
 	}
 
 	public GUI() {
-		ql = new QModelFixer();
+		ql = new EcoreQModelFixer();
 		// construct components
 		importButton = new JButton("Import model");
 		repairButton = new JButton("Repair");
@@ -155,6 +165,7 @@ public class GUI extends JPanel {
 		tag6.setActionCommand("6");
 
 		importButton.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent ae) {
 				try {
 					importButtonPressed();
@@ -166,6 +177,7 @@ public class GUI extends JPanel {
 		});
 
 		repairButton.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent ae) {
 				try {
 					repairButtonPressed();
@@ -177,6 +189,7 @@ public class GUI extends JPanel {
 		});
 
 		exportButton.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent ae) {
 				try {
 					exportButtonPressed();
@@ -202,13 +215,17 @@ public class GUI extends JPanel {
 		uri = URI.createFileURI(dest.getAbsolutePath());
 //		ql.resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore",
 //				new EcoreResourceFactoryImpl());
-		myMetaModel = ql.getModel(uri);
+		myMetaModel = getModel(uri);
 
 //		Resource auxModel = ql.getResourceSet().createResource(uri);
 //		auxModel.getContents().addAll(EcoreUtil.copyAll(myMetaModel.getContents()));
-		Resource auxModel = ql.copy(myMetaModel, uri);
+		Resource auxModel = copy(myMetaModel, uri);
 		
-		errors = ErrorExtractor.extractErrorsFrom(auxModel);
+		Set<Integer> unsupportedErrors = new HashSet<>();
+		unsupportedErrors.add(4);
+		unsupportedErrors.add(6);
+		ErrorExtractor errorExtractor = new EcoreErrorExtractor(unsupportedErrors);
+		errors = errorExtractor.extractErrorsFrom(auxModel);
 //		ql.nuQueue = errors;
 		
 
@@ -237,7 +254,7 @@ public class GUI extends JPanel {
 		long endTime = 0;
 		ql.setPreferences(preferences);
 		System.out.println("PREFERENCES: " + preferences.toString());
-		Sequence bestSequence = ql.fixModel(myMetaModel, uri);
+		Solution bestSolution = ql.fixModel(dest);
 //		ql.saveKnowledge();	
 
 		frame.getContentPane().removeAll();
@@ -247,7 +264,7 @@ public class GUI extends JPanel {
 
 		String seqFound = "Best sequence found to repair model " + files[0].getName() + ":"
 				+ System.getProperty("line.separator") + System.getProperty("line.separator");
-		getSequenceDisplay().insert(seqFound + bestSequence.toString(), 0);
+		getSequenceDisplay().insert(seqFound + bestSolution.getSequence().toString(), 0);
 		
 		endTime = System.currentTimeMillis();
 		long timeneeded = (endTime - startTime);
@@ -291,5 +308,22 @@ public class GUI extends JPanel {
 		frame.getContentPane().add(new GUI());
 		frame.pack();
 		frame.setVisible(true);
+	}
+	
+	private static Resource getModel(URI uri) {
+		ResourceSet resourceSet = new ResourceSetImpl();
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore",
+				new EcoreResourceFactoryImpl());
+		return resourceSet.getResource(uri, true);
+	}
+	
+	private static Resource copy(Resource model, URI uri) {
+		ResourceSet resourceSet = new ResourceSetImpl();
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore",
+				new EcoreResourceFactoryImpl());
+		Resource modelCopy = resourceSet.createResource(uri);
+		EList<EObject> contents = model.getContents();
+		modelCopy.getContents().addAll(EcoreUtil.copyAll(contents));
+		return modelCopy;
 	}
 }

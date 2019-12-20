@@ -6,25 +6,35 @@ import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EClassImpl;
 import org.eclipse.emf.ecore.impl.EDataTypeImpl;
 import org.eclipse.emf.ecore.impl.EEnumImpl;
 import org.eclipse.emf.ecore.resource.Resource;
-import hvl.projectparmorel.ml.Error;
-import hvl.projectparmorel.ml.ErrorExtractor;
-import hvl.projectparmorel.ml.ModelFixer;
-import hvl.projectparmorel.ml.QModelFixer;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
+
+import hvl.projectparmorel.ecore.EcoreErrorExtractor;
+import hvl.projectparmorel.ecore.EcoreQModelFixer;
+import hvl.projectparmorel.general.ErrorExtractor;
+import hvl.projectparmorel.general.ModelFixer;
+import hvl.projectparmorel.general.Error;
 
 public class Main {
 
 	public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException,
 			InvocationTargetException, IOException, NoSuchMethodException, SecurityException {
 
-		ModelFixer ql = new QModelFixer(createTags(0));
+		ModelFixer ql = new EcoreQModelFixer(createTags(0));
 		long startTimeT = System.currentTimeMillis();
 		long endTimeT = 0;
 		String root = "././mutants/";
@@ -47,13 +57,9 @@ public class Main {
 			copyFile(listOfFiles[i], dest);
 
 			URI uri = URI.createFileURI(dest.getAbsolutePath());
-//			ql.resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore",
-//					new EcoreResourceFactoryImpl());
-			Resource myMetaModel = ql.getModel(uri);
+			Resource myMetaModel = getModel(uri);
 
-			Resource auxModel = ql.copy(myMetaModel, uri);
-//			Resource auxModel = ql.getResourceSet().createResource(uri);
-//			auxModel.getContents().addAll(EcoreUtil.copyAll(myMetaModel.getContents()));
+			Resource auxModel = copy(myMetaModel, uri);
 
 			EPackage epa = (EPackage) auxModel.getContents().get(0);
 			System.out.println("Num. Classes: " + epa.getEClassifiers().size());
@@ -86,7 +92,11 @@ public class Main {
 			System.out.println("----------------------------------------------------------------------");
 			System.out.println("----------------------------------------------------------------------");
 
-			List<Error> errors = ErrorExtractor.extractErrorsFrom(auxModel);
+			Set<Integer> unsupportedErrors = new HashSet<>();
+			unsupportedErrors.add(4);
+			unsupportedErrors.add(6);
+			ErrorExtractor errorExtractor = new EcoreErrorExtractor(unsupportedErrors);
+			List<Error> errors = errorExtractor.extractErrorsFrom(auxModel);
 
 			System.out.println("INITIAL ERRORS:");
 			System.out.println(errors.toString());
@@ -94,7 +104,7 @@ public class Main {
 			System.out.println();
 
 //			System.out.println("PREFERENCES: " + ql.getPreferences().toString());
-			ql.fixModel(myMetaModel, uri);
+			ql.fixModel(dest);
 
 			endTime = System.currentTimeMillis();
 			long timeneeded = (endTime - startTime);
@@ -140,5 +150,22 @@ public class Main {
 		default:
 			return null;
 		}
+	}
+	
+	private static Resource getModel(URI uri) {
+		ResourceSet resourceSet = new ResourceSetImpl();
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore",
+				new EcoreResourceFactoryImpl());
+		return resourceSet.getResource(uri, true);
+	}
+	
+	private static Resource copy(Resource model, URI uri) {
+		ResourceSet resourceSet = new ResourceSetImpl();
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore",
+				new EcoreResourceFactoryImpl());
+		Resource modelCopy = resourceSet.createResource(uri);
+		EList<EObject> contents = model.getContents();
+		modelCopy.getContents().addAll(EcoreUtil.copyAll(contents));
+		return modelCopy;
 	}
 }
