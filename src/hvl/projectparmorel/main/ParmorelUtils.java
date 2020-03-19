@@ -1,8 +1,14 @@
 package hvl.projectparmorel.main;
 
+import java.io.IOException;
+import java.net.URI;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import hvl.projectparmorel.knowledge.Knowledge;
 
 public class ParmorelUtils {
 
@@ -46,6 +52,19 @@ public class ParmorelUtils {
 			return new ArrayList<Integer>(Arrays.asList(new Integer[] { 2 }));
 		default:
 			return null;
+		}
+	}
+	
+	/**
+	 * Deletes the knowledge file.
+	 */
+	public static void deleteExistingKnowledge() {
+		URI knowledgeUri = URI.create(Knowledge.KNOWLEDGE_FILE_NAME);
+		Path knowledgePath = Path.of(knowledgeUri);
+		try {
+			Files.deleteIfExists(knowledgePath);
+		} catch (IOException e) {
+			// Problem deleting
 		}
 	}
 }
