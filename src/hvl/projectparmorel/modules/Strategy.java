@@ -14,12 +14,20 @@ import hvl.projectparmorel.knowledge.Knowledge;
 import hvl.projectparmorel.modelrepair.Solution;
 import hvl.projectparmorel.utils.ParmorelUtils;
 
-public abstract class Experiment {
+/**
+ * The strategy on how to select the solution.
+ * 
+ * @author Magnus
+ */
+public abstract class Strategy {
 
 	private String fixedModelFolderName;
 
-	public Experiment(String fixedModelFolderName) {
-		this.fixedModelFolderName = fixedModelFolderName + "/bestWeight";
+	/**
+	 * @param experimentSpecificModelFolderName - the name of the folder to store the experiment results in
+	 */
+	public Strategy(String fixedModelFolderName) {
+		this.fixedModelFolderName = fixedModelFolderName;
 		File experimentResultFolder = new File(this.fixedModelFolderName);
 		if (!experimentResultFolder.exists()) {
 			experimentResultFolder.mkdir();

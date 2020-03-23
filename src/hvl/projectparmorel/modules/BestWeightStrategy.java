@@ -4,10 +4,15 @@ import java.util.List;
 
 import hvl.projectparmorel.modelrepair.Solution;
 
-public class BestWeightExperiment extends Experiment {
+/**
+ * This strategy selects the largest weight from all the results.
+ *  
+ * @author Magnus
+ */
+public class BestWeightStrategy extends Strategy {
 
-	public BestWeightExperiment(String fixedModelFolderName) {
-		super(fixedModelFolderName);
+	public BestWeightStrategy(String fixedModelFolderName) {
+		super(fixedModelFolderName + "/bestWeight");
 	}
 
 	@Override

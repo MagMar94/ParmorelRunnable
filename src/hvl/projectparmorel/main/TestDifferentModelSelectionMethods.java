@@ -4,8 +4,9 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import hvl.projectparmorel.modules.BestWeightExperiment;
-import hvl.projectparmorel.modules.Experiment;
+import hvl.projectparmorel.modules.BestWeightStrategy;
+import hvl.projectparmorel.modules.ClosestDistanceStrategy;
+import hvl.projectparmorel.modules.Strategy;
 import hvl.projectparmorel.utils.ParmorelUtils;
 
 public class TestDifferentModelSelectionMethods {
@@ -25,10 +26,11 @@ public class TestDifferentModelSelectionMethods {
 			experimentResultFolder.mkdir();
 		}
 		
-		List<Experiment> experiments = new ArrayList<>();
-		experiments.add(new BestWeightExperiment(fixedModelFolderName));
+		List<Strategy> experiments = new ArrayList<>();
+		experiments.add(new BestWeightStrategy(fixedModelFolderName));
+		experiments.add(new ClosestDistanceStrategy(fixedModelFolderName));
 		
-		for(Experiment experiment : experiments) {
+		for(Strategy experiment : experiments) {
 			ParmorelUtils.deleteExistingKnowledge();
 			experiment.repairModels(brokenModels, 0);
 		}
