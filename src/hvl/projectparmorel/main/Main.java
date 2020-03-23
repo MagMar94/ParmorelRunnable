@@ -25,6 +25,7 @@ import hvl.projectparmorel.ecore.EcoreErrorExtractor;
 import hvl.projectparmorel.ecore.EcoreQModelFixer;
 import hvl.projectparmorel.general.ErrorExtractor;
 import hvl.projectparmorel.general.ModelFixer;
+import hvl.projectparmorel.utils.ParmorelUtils;
 import hvl.projectparmorel.general.Error;
 
 public class Main {

@@ -1,5 +1,6 @@
-package hvl.projectparmorel.main;
+package hvl.projectparmorel.utils;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.nio.file.Files;
@@ -59,12 +60,32 @@ public class ParmorelUtils {
 	 * Deletes the knowledge file.
 	 */
 	public static void deleteExistingKnowledge() {
-		URI knowledgeUri = URI.create(Knowledge.KNOWLEDGE_FILE_NAME);
+		URI knowledgeUri = URI.create("file:///" + Knowledge.KNOWLEDGE_FILE_NAME);
 		Path knowledgePath = Path.of(knowledgeUri);
 		try {
 			Files.deleteIfExists(knowledgePath);
 		} catch (IOException e) {
 			// Problem deleting
 		}
+	}
+
+	/**
+	 * Removes all files that are not ecore files from the list.
+	 * 
+	 * @param files
+	 * @return a list containing all the ecore-files from the input-list.
+	 */
+	public static File[] removeFilesThatAreNotEcore(File[] files) {
+		List<File> ecoreModels = new ArrayList<>();
+		int numberOfEcoreFiles = 0;
+		for(File file : files) {
+			if(file.getName().contains(".ecore")) {
+				ecoreModels.add(file);
+				numberOfEcoreFiles++;
+			}
+		}
+		
+		File[] list = new File[numberOfEcoreFiles];
+		return ecoreModels.toArray(list);
 	}
 }
