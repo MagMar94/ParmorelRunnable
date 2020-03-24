@@ -4,8 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Files;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -27,6 +25,7 @@ import hvl.projectparmorel.ecore.EcoreErrorExtractor;
 import hvl.projectparmorel.ecore.EcoreQModelFixer;
 import hvl.projectparmorel.general.ErrorExtractor;
 import hvl.projectparmorel.general.ModelFixer;
+import hvl.projectparmorel.utils.ParmorelUtils;
 import hvl.projectparmorel.general.Error;
 
 public class Main {
@@ -34,7 +33,7 @@ public class Main {
 	public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException,
 			InvocationTargetException, IOException, NoSuchMethodException, SecurityException {
 
-		ModelFixer ql = new EcoreQModelFixer(createTags(0));
+		ModelFixer ql = new EcoreQModelFixer(ParmorelUtils.generateUserSettings(0));
 		long startTimeT = System.currentTimeMillis();
 		long endTimeT = 0;
 		String root = "././mutants/";
@@ -122,34 +121,6 @@ public class Main {
 	
 	private static void copyFile(File from, File to) throws IOException {
 		Files.copy(from.toPath(), to.toPath());
-	}
-	
-	private static List<Integer> createTags(int user) {
-		switch (user) {
-		// ECMFA paper preferences
-		case 0:
-			return new ArrayList<Integer>(Arrays.asList(new Integer[] { 2, 4 }));
-		// error hierarchy high, sequence short
-		case 1:
-			return new ArrayList<Integer>(Arrays.asList(new Integer[] { 0, 2 }));
-		// error hierarchy low, sequence long, high modification
-		case 2:
-			return new ArrayList<Integer>(Arrays.asList(new Integer[] { 1, 3, 6 }));
-		// avoid deletion
-		case 3:
-			return new ArrayList<Integer>(Arrays.asList(new Integer[] { 4 }));
-		// short sequence, low modification
-		case 4:
-			return new ArrayList<Integer>(Arrays.asList(new Integer[] { 0, 4, 5 }));
-		// long sequence, low modification, avoid deletion
-		case 5:
-			return new ArrayList<Integer>(Arrays.asList(new Integer[] { 1, 5 }));
-		// error hierarchy high
-		case 6:
-			return new ArrayList<Integer>(Arrays.asList(new Integer[] { 2 }));
-		default:
-			return null;
-		}
 	}
 	
 	private static Resource getModel(URI uri) {
