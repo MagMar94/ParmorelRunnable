@@ -27,7 +27,8 @@ public class ClosestDistanceStrategy extends Strategy {
 
 		for (int i = 1; i < possibleSolutions.size(); i++) {
 			double distanceFromOriginal = possibleSolutions.get(i).calculateDistanceFromOriginal();
-			if (distanceFromOriginal < shortestFromOriginal) {
+			if (isMeasurable(distanceFromOriginal)
+					&& ((distanceFromOriginal < shortestFromOriginal || !isMeasurable(shortestFromOriginal)))) {
 				optimalSolution = possibleSolutions.get(i);
 				shortestFromOriginal = distanceFromOriginal;
 			} else if (shortestFromOriginal == distanceFromOriginal
@@ -37,6 +38,19 @@ public class ClosestDistanceStrategy extends Strategy {
 		}
 
 		return optimalSolution;
+	}
+
+	/**
+	 * Since @see
+	 * {@link hvl.projectparmorel.modelrepair.Solution#calculateDistanceFromOriginal()}
+	 * returns -1 if the distance can not be measured, this method returns true if
+	 * the distance is a valid measurable distance and false otherwise.
+	 * 
+	 * @param distance
+	 * @return true if the distance is a valid measurable distance, false otherwise.
+	 */
+	private boolean isMeasurable(double distance) {
+		return distance != -1;
 	}
 
 }
