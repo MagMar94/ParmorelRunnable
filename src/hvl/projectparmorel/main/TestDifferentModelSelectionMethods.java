@@ -30,9 +30,13 @@ public class TestDifferentModelSelectionMethods {
 		experiments.add(new BestWeightStrategy(fixedModelFolderName));
 		experiments.add(new ClosestDistanceStrategy(fixedModelFolderName));
 		
+		long startTime = System.currentTimeMillis();
 		for(Strategy experiment : experiments) {
 			ParmorelUtils.deleteExistingKnowledge();
 			experiment.repairModels(brokenModels, 0);
 		}
+		long endTime = System.currentTimeMillis();
+		long executionTimme = (endTime - startTime);
+		System.out.println("TOTAL TIME: " + executionTimme);
 	}
 }
