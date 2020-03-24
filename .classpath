@@ -15,11 +15,6 @@
 	<classpathentry kind="lib" path="projectparmorel/libs/org.eclipse.emf.ecore_2.13.0.v20170609-0707.jar"/>
 	<classpathentry kind="lib" path="projectparmorel/libs/org.eclipse.emf.ecore.xmi_2.13.0.v20170609-0707.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry kind="lib" path="projectparmorel/libs/org.eclipse.epsilon.common_1.5.1.201809302027.jar"/>
-	<classpathentry kind="lib" path="projectparmorel/libs/org.eclipse.epsilon.ecl.engine_1.5.1.201809302027.jar"/>
-	<classpathentry kind="lib" path="projectparmorel/libs/org.eclipse.epsilon.emc.emf_1.5.1.201809302027.jar"/>
-	<classpathentry kind="lib" path="projectparmorel/libs/org.eclipse.epsilon.eol.dt_1.5.1.201809302027.jar"/>
-	<classpathentry kind="lib" path="projectparmorel/libs/org.eclipse.epsilon.eol.engine_1.5.1.201809302027.jar"/>
-	<classpathentry kind="lib" path="projectparmorel/libs/org.eclipse.epsilon.erl.engine_1.5.1.201809302027.jar"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
