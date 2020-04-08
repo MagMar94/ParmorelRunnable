@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 
 import hvl.projectparmorel.ecore.EcoreErrorExtractor;
 import hvl.projectparmorel.ecore.EcoreQModelFixer;
+import hvl.projectparmorel.exceptions.NoErrorsInModelException;
 import hvl.projectparmorel.general.ErrorExtractor;
 import hvl.projectparmorel.general.ModelFixer;
 import hvl.projectparmorel.modelrepair.Solution;
@@ -254,19 +255,24 @@ public class GUI extends JPanel {
 		long endTime = 0;
 		ql.setPreferences(preferences);
 		System.out.println("PREFERENCES: " + preferences.toString());
-		Solution bestSolution = ql.fixModel(dest);
-//		ql.saveKnowledge();	
-
-		frame.getContentPane().removeAll();
-		frame.getContentPane().add(secondGUI());
-		frame.getContentPane().revalidate();
-		frame.getContentPane().repaint();
-
-		String seqFound = "Best sequence found to repair model " + files[0].getName() + ":"
-				+ System.getProperty("line.separator") + System.getProperty("line.separator");
-		getSequenceDisplay().insert(seqFound + bestSolution.getSequence().toString(), 0);
-		
-		endTime = System.currentTimeMillis();
+		try {
+			Solution bestSolution = ql.fixModel(dest);
+			
+			frame.getContentPane().removeAll();
+			frame.getContentPane().add(secondGUI());
+			frame.getContentPane().revalidate();
+			frame.getContentPane().repaint();
+			
+			String seqFound = "Best sequence found to repair model " + files[0].getName() + ":"
+					+ System.getProperty("line.separator") + System.getProperty("line.separator");
+			getSequenceDisplay().insert(seqFound + bestSolution.getSequence().toString(), 0);
+			
+			endTime = System.currentTimeMillis();
+		} catch (NoErrorsInModelException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+//		ql.saveKnowledge();			
 		long timeneeded = (endTime - startTime);
 		System.out.println("TOTAL TIME: " + timeneeded);
 	}

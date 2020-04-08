@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 
 import hvl.projectparmorel.ecore.EcoreErrorExtractor;
 import hvl.projectparmorel.ecore.EcoreQModelFixer;
+import hvl.projectparmorel.exceptions.NoErrorsInModelException;
 import hvl.projectparmorel.general.ErrorExtractor;
 import hvl.projectparmorel.general.ModelFixer;
 import hvl.projectparmorel.utils.ParmorelUtils;
@@ -103,7 +104,11 @@ public class Main {
 			System.out.println();
 
 //			System.out.println("PREFERENCES: " + ql.getPreferences().toString());
-			ql.fixModel(dest);
+			try {
+				ql.fixModel(dest);
+			} catch (NoErrorsInModelException e) {
+				e.printStackTrace();
+			}
 
 			endTime = System.currentTimeMillis();
 			long timeneeded = (endTime - startTime);

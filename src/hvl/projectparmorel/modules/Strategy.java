@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 import hvl.projectparmorel.ecore.EcoreQModelFixer;
+import hvl.projectparmorel.exceptions.NoErrorsInModelException;
 import hvl.projectparmorel.general.ModelFixer;
 import hvl.projectparmorel.knowledge.Knowledge;
 import hvl.projectparmorel.modelrepair.Solution;
@@ -24,7 +25,8 @@ public abstract class Strategy {
 	private String fixedModelFolderName;
 
 	/**
-	 * @param experimentSpecificModelFolderName - the name of the folder to store the experiment results in
+	 * @param experimentSpecificModelFolderName - the name of the folder to store
+	 *                                          the experiment results in
 	 */
 	public Strategy(String fixedModelFolderName) {
 		this.fixedModelFolderName = fixedModelFolderName;
@@ -69,37 +71,44 @@ public abstract class Strategy {
 			try {
 				fh = new FileHandler(iterationSpecificFolderName + "/LogFile.log");
 				logger.addHandler(fh);
-				SimpleFormatter formatter = new SimpleFormatter();  
-		        fh.setFormatter(formatter); 
+				SimpleFormatter formatter = new SimpleFormatter();
+				fh.setFormatter(formatter);
 			} catch (SecurityException e1) {
 				e1.printStackTrace();
 			} catch (IOException e1) {
 				e1.printStackTrace();
 			}
 
-			ql.fixModel(brokenModels[i]);
-			List<Solution> solutions = ql.getPossibleSolutions();
-
-			Solution solution = selectSolution(solutions);
-			solution.reward(true);
-
-			File knowledgeFile = new File(Knowledge.KNOWLEDGE_FILE_NAME);
-			File fixedModelFile = new File(fixedModelFolderName + "/" + i + "_" + brokenModels[i].getName());
-			try {
-				Files.copy(solution.getModel().toPath(), fixedModelFile.toPath());
-				Files.copy(knowledgeFile.toPath(),
-						new File(iterationSpecificFolderName + "/" + knowledgeFile.getName()).toPath());
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
 			
+			try {
+				ql.fixModel(brokenModels[i]);
+				List<Solution> solutions = ql.getPossibleSolutions();
+
+				if (!solutions.isEmpty()) {
+					Solution solution = selectSolution(solutions);
+					solution.reward(true);
+
+					File knowledgeFile = new File(Knowledge.KNOWLEDGE_FILE_NAME);
+					File fixedModelFile = new File(fixedModelFolderName + "/" + i + "_" + brokenModels[i].getName());
+					try {
+						Files.copy(solution.getModel().toPath(), fixedModelFile.toPath());
+						Files.copy(knowledgeFile.toPath(),
+								new File(iterationSpecificFolderName + "/" + knowledgeFile.getName()).toPath());
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			} catch (NoErrorsInModelException e) {
+				logger.info("No errors found in " + brokenModels[i].getAbsolutePath());
+			}
+
 			if (fh != null) {
 				logger.removeHandler(fh);
 				fh.close();
 			}
-				
-		}
 
+		}
+		
 		try {
 			File knowledgeFile = new File(Knowledge.KNOWLEDGE_FILE_NAME);
 			Files.move(knowledgeFile.getAbsoluteFile().toPath(),
