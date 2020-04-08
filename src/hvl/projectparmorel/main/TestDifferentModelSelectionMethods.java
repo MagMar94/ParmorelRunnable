@@ -32,6 +32,7 @@ public class TestDifferentModelSelectionMethods {
 		
 		long startTime = System.currentTimeMillis();
 		for(Strategy experiment : experiments) {
+			System.out.println("Starting new experiment: " + experiment.getClass().getName());
 			ParmorelUtils.deleteExistingKnowledge();
 			experiment.repairModels(brokenModels, 0);
 		}

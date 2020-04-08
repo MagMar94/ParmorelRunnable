@@ -84,7 +84,7 @@ public abstract class Strategy {
 			solution.reward(true);
 
 			File knowledgeFile = new File(Knowledge.KNOWLEDGE_FILE_NAME);
-			File fixedModelFile = new File(iterationSpecificFolderName + "/" + brokenModels[i].getName());
+			File fixedModelFile = new File(fixedModelFolderName + "/" + i + "_" + brokenModels[i].getName());
 			try {
 				Files.copy(solution.getModel().toPath(), fixedModelFile.toPath());
 				Files.copy(knowledgeFile.toPath(),
