@@ -94,12 +94,17 @@ public abstract class Strategy {
 						Files.copy(solution.getModel().toPath(), fixedModelFile.toPath());
 						Files.copy(knowledgeFile.toPath(),
 								new File(iterationSpecificFolderName + "/" + knowledgeFile.getName()).toPath());
+						for(Solution s : solutions) {
+							s.getModel().delete();
+						}
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
 				}
 			} catch (NoErrorsInModelException e) {
 				logger.info("No errors found in " + brokenModels[i].getAbsolutePath());
+			} catch (Exception e) {
+				logger.severe(e.getLocalizedMessage());
 			}
 
 			if (fh != null) {
