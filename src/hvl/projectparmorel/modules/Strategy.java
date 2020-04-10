@@ -8,6 +8,8 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+import org.junit.platform.commons.util.ExceptionUtils;
+
 import hvl.projectparmorel.ecore.EcoreQModelFixer;
 import hvl.projectparmorel.exceptions.NoErrorsInModelException;
 import hvl.projectparmorel.general.ModelFixer;
@@ -57,12 +59,14 @@ public abstract class Strategy {
 	 * @param brokenModels
 	 * @param usersettings
 	 */
-	public void repairModels(File[] brokenModels, int usersettings) {
-		ModelFixer ql = new EcoreQModelFixer(ParmorelUtils.generateUserSettings(usersettings));
+	public void repairModels(File[] brokenModels) {
+		ModelFixer ql = getModelFixer();
 		Logger logger = Logger.getLogger("MyLog");
 		FileHandler fh = null;
 
 		for (int i = 0; i < brokenModels.length; i++) {
+			if (!brokenModels[i].getName().contains(".ecore"))
+				continue;
 			String iterationSpecificFolderName = fixedModelFolderName + "/model" + i;
 			File fixedModelFolder = new File(iterationSpecificFolderName);
 			if (!fixedModelFolder.exists()) {
@@ -79,10 +83,10 @@ public abstract class Strategy {
 				e1.printStackTrace();
 			}
 
-			
+			List<Solution> solutions = null;
 			try {
 				ql.fixModel(brokenModels[i]);
-				List<Solution> solutions = ql.getPossibleSolutions();
+				solutions = ql.getPossibleSolutions();
 
 				if (!solutions.isEmpty()) {
 					Solution solution = selectSolution(solutions);
@@ -94,7 +98,7 @@ public abstract class Strategy {
 						Files.copy(solution.getModel().toPath(), fixedModelFile.toPath());
 						Files.copy(knowledgeFile.toPath(),
 								new File(iterationSpecificFolderName + "/" + knowledgeFile.getName()).toPath());
-						for(Solution s : solutions) {
+						for (Solution s : solutions) {
 							s.getModel().delete();
 						}
 					} catch (IOException e) {
@@ -104,7 +108,13 @@ public abstract class Strategy {
 			} catch (NoErrorsInModelException e) {
 				logger.info("No errors found in " + brokenModels[i].getAbsolutePath());
 			} catch (Exception e) {
-				logger.severe(e.getLocalizedMessage());
+				logger.severe(e.getLocalizedMessage() + "\nStack trace:\n"
+						+ ExceptionUtils.readStackTrace(e));
+				if (solutions != null) {
+					for (Solution s : solutions) {
+						s.getModel().delete();
+					}
+				}
 			}
 
 			if (fh != null) {
@@ -113,7 +123,7 @@ public abstract class Strategy {
 			}
 
 		}
-		
+
 		try {
 			File knowledgeFile = new File(Knowledge.KNOWLEDGE_FILE_NAME);
 			Files.move(knowledgeFile.getAbsoluteFile().toPath(),
@@ -121,6 +131,15 @@ public abstract class Strategy {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	/**
+	 * Gets the model fixer to use.
+	 * 
+	 * @return a model fixer
+	 */
+	protected ModelFixer getModelFixer() {
+		return new EcoreQModelFixer(ParmorelUtils.generateUserSettings(0));
 	}
 
 	/**
