@@ -35,12 +35,12 @@ public class TestDifferentModelSelectionMethods {
 		List<Strategy> experiments = new ArrayList<>();
 		experiments.add(new BestWeightStrategy(fixedModelFolderName));
 		experiments.add(new ClosestDistanceStrategy(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy02(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy045(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy136(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy15(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy2(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy4(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy02(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy045(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy136(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy15(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy2(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy4(fixedModelFolderName));
 		
 		long startTime = System.currentTimeMillis();
 		for(Strategy experiment : experiments) {
@@ -50,6 +50,12 @@ public class TestDifferentModelSelectionMethods {
 		}
 		long endTime = System.currentTimeMillis();
 		long executionTimme = (endTime - startTime);
-		System.out.println("TOTAL TIME: " + executionTimme);
+		long hours = (executionTimme / (1000 * 60 * 60)) % 24;
+		long minutes = (executionTimme / (1000 * 60)) % 60;
+		long seconds = (executionTimme / 1000) % 60;
+		long millis = executionTimme % 1000;
+		
+		System.out.println("TOTAL TIME: " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds and " + millis + " ms. (" + executionTimme + " ms)");
+		
 	}
 }
