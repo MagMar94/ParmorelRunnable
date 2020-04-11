@@ -1,6 +1,8 @@
 package hvl.projectparmorel.scripts.logreaders;
 
-public class ModelMetricEvaluation {
+import hvl.projectparmorel.scripts.Evaluation;
+
+public class ModelMetricEvaluation implements Evaluation {
 	public static char CSV_SEPARATION_SIGN = ';';
 	public final static String CSV_COLUMN_HEADER = "Filename" + CSV_SEPARATION_SIGN + "Unidirectional refs"
 			+ CSV_SEPARATION_SIGN + "Opposite refs" + CSV_SEPARATION_SIGN + "Number of metaclasses"
