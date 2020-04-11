@@ -2,7 +2,9 @@ package hvl.projectparmorel.scripts.copyfaultymodels;
 
 import java.util.List;
 
-public class ModelErrorEvaluation {
+import hvl.projectparmorel.scripts.Evaluation;
+
+public class ModelErrorEvaluation implements Evaluation {
 	public static char CSV_SEPARATION_SIGN = ';';
 	public final static String CSV_COLUMN_HEADER = "Filename" + CSV_SEPARATION_SIGN + "Error code" + CSV_SEPARATION_SIGN
 			+ "Message" + CSV_SEPARATION_SIGN;

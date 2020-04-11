@@ -1,9 +1,6 @@
 package hvl.projectparmorel.scripts.copyfaultymodels;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,7 +11,10 @@ import java.util.regex.Pattern;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 
-public class LogReader {
+import hvl.projectparmorel.scripts.Evaluation;
+import hvl.projectparmorel.scripts.LogReader;
+
+public class FaultyModelLogReader extends LogReader {
 	private static String beforeEvaluationString = "INFO: NEW MODEL\n";
 	private static String afterEvaluationString = "hvl.modelrepair.CopyFaultyModels main";
 	
@@ -26,7 +26,7 @@ public class LogReader {
 		if (file != null) {
 			if (file.getName().endsWith(".log")) {
 				System.out.println("Intepreting log...");
-				List<ModelErrorEvaluation> evaluations = interpretLog(file);
+				List<Evaluation> evaluations = interpretLog(file);
 				System.out.println("Generating csv...");
 				String csvString = generateCSVStringFrom(evaluations);
 				System.out.println("Getting destination file...");
@@ -65,8 +65,8 @@ public class LogReader {
 	 * @param logFile
 	 * @return a list of model evaluations
 	 */
-	private static List<ModelErrorEvaluation> interpretLog(File logFile) {
-		List<ModelErrorEvaluation> evaluations = new ArrayList<>();
+	private static List<Evaluation> interpretLog(File logFile) {
+		List<Evaluation> evaluations = new ArrayList<>();
 
 		String log = readLog(logFile);
 		if (log != null) {
@@ -85,41 +85,6 @@ public class LogReader {
 		}
 
 		return evaluations;
-	}
-
-	/**
-	 * Reads the log file and returns the content as a String
-	 * 
-	 * @param logFile
-	 * @return content as String
-	 */
-	private static String readLog(File logFile) {
-		BufferedReader br = null;
-		try {
-			br = new BufferedReader(new FileReader(logFile));
-			StringBuilder sb = new StringBuilder();
-			String line = br.readLine();
-
-			while (line != null) {
-				sb.append(line);
-				sb.append(System.lineSeparator());
-				line = br.readLine();
-			}
-			return sb.toString();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			if (br != null) {
-				try {
-					br.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		}
-		return null;
 	}
 
 	/**
@@ -171,21 +136,21 @@ public class LogReader {
 		}
 		return null;
 	}
-
-	/**
-	 * Generates a CSV-string from the evaluations.
-	 * 
-	 * @param evaluations
-	 * @return a string in CSV-format
-	 */
-	private static String generateCSVStringFrom(List<ModelErrorEvaluation> evaluations) {
-		String csvString = "";
-		for (ModelErrorEvaluation e : evaluations) {
-			System.out.println(e.getName());
-			csvString += e.toCsvString();
-		}
-		return csvString;
-	}
+//
+//	/**
+//	 * Generates a CSV-string from the evaluations.
+//	 * 
+//	 * @param evaluations
+//	 * @return a string in CSV-format
+//	 */
+//	private static String generateCSVStringFrom(List<ModelErrorEvaluation> evaluations) {
+//		String csvString = "";
+//		for (ModelErrorEvaluation e : evaluations) {
+//			System.out.println(e.getName());
+//			csvString += e.toCsvString();
+//		}
+//		return csvString;
+//	}
 
 	/**
 	 * Writes content to file
