@@ -1,6 +1,6 @@
 package hvl.projectparmorel.scripts.logreaders;
 
-public class ModelEvaluation {
+public class ModelMetricEvaluation {
 	public static char CSV_SEPARATION_SIGN = ';';
 	public final static String CSV_COLUMN_HEADER = "Filename" + CSV_SEPARATION_SIGN + "Unidirectional refs"
 			+ CSV_SEPARATION_SIGN + "Opposite refs" + CSV_SEPARATION_SIGN + "Number of metaclasses"
@@ -24,7 +24,7 @@ public class ModelEvaluation {
 	private Double metamodelReuse;
 	private Double relaxationIndexOfMetamodel;
 
-	public ModelEvaluation() {
+	public ModelMetricEvaluation() {
 	}
 
 	/**

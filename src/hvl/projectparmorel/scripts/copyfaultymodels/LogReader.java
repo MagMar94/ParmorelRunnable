@@ -26,7 +26,7 @@ public class LogReader {
 		if (file != null) {
 			if (file.getName().endsWith(".log")) {
 				System.out.println("Intepreting log...");
-				List<ModelEvaluation> evaluations = interpretLog(file);
+				List<ModelErrorEvaluation> evaluations = interpretLog(file);
 				System.out.println("Generating csv...");
 				String csvString = generateCSVStringFrom(evaluations);
 				System.out.println("Getting destination file...");
@@ -65,8 +65,8 @@ public class LogReader {
 	 * @param logFile
 	 * @return a list of model evaluations
 	 */
-	private static List<ModelEvaluation> interpretLog(File logFile) {
-		List<ModelEvaluation> evaluations = new ArrayList<>();
+	private static List<ModelErrorEvaluation> interpretLog(File logFile) {
+		List<ModelErrorEvaluation> evaluations = new ArrayList<>();
 
 		String log = readLog(logFile);
 		if (log != null) {
@@ -75,7 +75,7 @@ public class LogReader {
 
 			while (matcher.find()) {
 				String modelEvaluationString = matcher.group(1);
-				ModelEvaluation evaluation = new ModelEvaluation();
+				ModelErrorEvaluation evaluation = new ModelErrorEvaluation();
 				
 				evaluation.setName(findNameForModel(modelEvaluationString));
 				evaluation.setErrors(findErrorsForModel(modelEvaluationString));
@@ -178,9 +178,9 @@ public class LogReader {
 	 * @param evaluations
 	 * @return a string in CSV-format
 	 */
-	private static String generateCSVStringFrom(List<ModelEvaluation> evaluations) {
+	private static String generateCSVStringFrom(List<ModelErrorEvaluation> evaluations) {
 		String csvString = "";
-		for (ModelEvaluation e : evaluations) {
+		for (ModelErrorEvaluation e : evaluations) {
 			System.out.println(e.getName());
 			csvString += e.toCsvString();
 		}
@@ -197,7 +197,7 @@ public class LogReader {
 		try {
 			file.createNewFile();
 			FileWriter myWriter = new FileWriter(file);
-			myWriter.write(ModelEvaluation.CSV_COLUMN_HEADER + "\n");
+			myWriter.write(ModelErrorEvaluation.CSV_COLUMN_HEADER + "\n");
 			myWriter.write(content);
 			myWriter.close();
 			System.out.println("Successfully wrote to the file.");

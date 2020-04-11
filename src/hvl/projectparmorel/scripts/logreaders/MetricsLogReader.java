@@ -33,7 +33,7 @@ public class MetricsLogReader {
 		if (file != null) {
 			if (file.getName().endsWith(".txt")) {
 				System.out.println("Intepreting log...");
-				List<ModelEvaluation> evaluations = interpretLog(file);
+				List<ModelMetricEvaluation> evaluations = interpretLog(file);
 				System.out.println("Generating csv...");
 				String csvString = generateCSVStringFrom(evaluations);
 				System.out.println("Getting destination file...");
@@ -72,8 +72,8 @@ public class MetricsLogReader {
 	 * @param logFile
 	 * @return a list of model evaluations
 	 */
-	private static List<ModelEvaluation> interpretLog(File logFile) {
-		List<ModelEvaluation> evaluations = new ArrayList<>();
+	private static List<ModelMetricEvaluation> interpretLog(File logFile) {
+		List<ModelMetricEvaluation> evaluations = new ArrayList<>();
 
 		String log = readLog(logFile);
 		if (log != null) {
@@ -82,7 +82,7 @@ public class MetricsLogReader {
 
 			while (matcher.find()) {
 				String modelEvaluationString = matcher.group(1);
-				ModelEvaluation evaluation = new ModelEvaluation();
+				ModelMetricEvaluation evaluation = new ModelMetricEvaluation();
 				evaluation.setName(findNameForModel(modelEvaluationString));
 				evaluation.setNumberOfMetaclasses(findNumberOfMetaclassesFrom(modelEvaluationString));
 				evaluation.setNumberOfReferences(findNumberOfReferencesFrom(modelEvaluationString));
@@ -356,9 +356,9 @@ public class MetricsLogReader {
 	 * @param evaluations
 	 * @return a string in CSV-format
 	 */
-	private static String generateCSVStringFrom(List<ModelEvaluation> evaluations) {
+	private static String generateCSVStringFrom(List<ModelMetricEvaluation> evaluations) {
 		String csvString = "";
-		for (ModelEvaluation e : evaluations) {
+		for (ModelMetricEvaluation e : evaluations) {
 			csvString += e.toCsvString() + "\n";
 		}
 		return csvString;
@@ -374,7 +374,7 @@ public class MetricsLogReader {
 		try {
 			file.createNewFile();
 			FileWriter myWriter = new FileWriter(file);
-			myWriter.write(ModelEvaluation.CSV_COLUMN_HEADER + "\n");
+			myWriter.write(ModelMetricEvaluation.CSV_COLUMN_HEADER + "\n");
 			myWriter.write(content);
 			myWriter.close();
 			System.out.println("Successfully wrote to the file.");
