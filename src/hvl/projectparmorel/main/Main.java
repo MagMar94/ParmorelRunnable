@@ -108,6 +108,8 @@ public class Main {
 				ql.fixModel(dest);
 			} catch (NoErrorsInModelException e) {
 				e.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 
 			endTime = System.currentTimeMillis();
