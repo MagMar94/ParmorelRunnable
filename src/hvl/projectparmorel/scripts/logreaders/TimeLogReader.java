@@ -1,10 +1,14 @@
 package hvl.projectparmorel.scripts.logreaders;
 
+import java.awt.EventQueue;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -14,26 +18,12 @@ import javax.swing.JFrame;
 import hvl.projectparmorel.scripts.Evaluation;
 import hvl.projectparmorel.scripts.LogReader;
 
-public class StrategyLogReader extends LogReader {
-
-	private static final JFileChooser fc = new JFileChooser();
+public class TimeLogReader extends LogReader {
 
 	public static void main(String[] args) {
-		System.out.println("Getting experiment result folder...");
-		File topFolder = getLogFile();
-		if (topFolder != null && topFolder.isDirectory()) {
-			File[] subFiles = topFolder.listFiles();
-
-			List<Evaluation> evaluations = new ArrayList<>();
-			for (File file : subFiles) {
-				if (file.isDirectory()) {
-					System.out.println("Reading log for " + file.getName());
-					File logFile = new File(file.getAbsoluteFile() + "/LogFile.log");
-					ModelStrategyEvaluation evaluation = interpretLog(logFile);
-					evaluations.add(evaluation);
-				}
-			}
-			
+		@SuppressWarnings("unchecked")
+		List<Evaluation> evaluations = (List<Evaluation>)(List<?>) getTimeEvaluations(fc);
+		if(evaluations != null) {
 			System.out.println("Generating csv...");
 			String csvString = generateCSVStringFrom(evaluations);
 			System.out.println("Getting destination file...");
@@ -44,15 +34,73 @@ public class StrategyLogReader extends LogReader {
 				System.out.println("Finished!");
 			}
 		}
-		
+
 		System.exit(0);
 	}
+	
+	/**
+	 * Returns a time map, mappging from the name of the model to the time it took to repair it.
+	 * 
+	 * @return a map from model name to repairing time.
+	 */
+	public static Map<String, Integer> getTimeMap(JFileChooser fc){
+		Map<String, Integer > timeMap = new HashMap<>();
+		@SuppressWarnings("unchecked")
+		List<Evaluation> evaluations = (List<Evaluation>)(List<?>) getTimeEvaluations(fc);
+		for(Evaluation evaluation : evaluations) {
+			if(evaluation instanceof ModelStrategyEvaluation) {
+				ModelStrategyEvaluation mEvaluation = (ModelStrategyEvaluation) evaluation;
+				timeMap.put(mEvaluation.getName(), mEvaluation.getTime());
+			}	
+		}
+		
+		return timeMap;
+	}
 
-	private static File getLogFile() {
+	/**
+	 * Promts the user for a folder containing all the results. It enters all the subdirectories and reads the log, extracting model name and time.
+	 * 
+	 * @return of all the evaluatons
+	 */
+	public static List<ModelStrategyEvaluation> getTimeEvaluations(JFileChooser fc) {
+		System.out.println("Getting experiment result folder...");
+		File topFolder = getLogFile(fc);
+		if (topFolder != null && topFolder.isDirectory()) {
+			File[] subFiles = topFolder.listFiles();
+
+			List<ModelStrategyEvaluation> evaluations = new ArrayList<>();
+			for (File file : subFiles) {
+				if (file.isDirectory()) {
+					System.out.println("Reading log for " + file.getName());
+					File logFile = new File(file.getAbsoluteFile() + "/LogFile.log");
+					ModelStrategyEvaluation evaluation = interpretLog(logFile);
+					evaluations.add(evaluation);
+				}
+			}
+			return evaluations;
+		}
+		return null;
+	}
+
+	private static int returnVal;
+	private static File getLogFile(JFileChooser fc) {
 		fc.setDialogTitle("Select the experiment result folder");
 		fc.setMultiSelectionEnabled(false);
 		fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-		int returnVal = fc.showOpenDialog(null);
+		//int returnVal = fc.showOpenDialog(null);
+		
+		try {
+			EventQueue.invokeAndWait(new Runnable() {
+			    @Override
+			    public void run() {
+			    	returnVal = fc.showOpenDialog(null);
+			    }
+			});
+		} catch (InvocationTargetException e) {
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 		if (returnVal == JFileChooser.APPROVE_OPTION) {
 			File folder = fc.getSelectedFile();
@@ -104,7 +152,6 @@ public class StrategyLogReader extends LogReader {
 		}
 		return -1;
 	}
-	
 
 	/**
 	 * Gets the destination file to save the output to.
@@ -122,7 +169,7 @@ public class StrategyLogReader extends LogReader {
 			return null;
 		}
 	}
-	
+
 	/**
 	 * Writes content to file
 	 * 

@@ -9,8 +9,8 @@ public class ModelMetricEvaluation implements Evaluation {
 			+ CSV_SEPARATION_SIGN + "Number of references" + CSV_SEPARATION_SIGN + "Number of attributes"
 			+ CSV_SEPARATION_SIGN + "DIT" + CSV_SEPARATION_SIGN + "HAgg" + CSV_SEPARATION_SIGN + "Maintainability"
 			+ CSV_SEPARATION_SIGN + "Understantability" + CSV_SEPARATION_SIGN + "Complexity" + CSV_SEPARATION_SIGN
-			+ "Reuse of the metamodel" + CSV_SEPARATION_SIGN + "Relaxation index of the metamodel"
-			+ CSV_SEPARATION_SIGN;
+			+ "Reuse of the metamodel" + CSV_SEPARATION_SIGN + "Relaxation index of the metamodel" + CSV_SEPARATION_SIGN
+			+ "Time (ms)" + CSV_SEPARATION_SIGN;
 
 	private String name;
 	private Integer unidirectionalRef;
@@ -25,6 +25,7 @@ public class ModelMetricEvaluation implements Evaluation {
 	private Double complexity;
 	private Double metamodelReuse;
 	private Double relaxationIndexOfMetamodel;
+	private int time;
 
 	public ModelMetricEvaluation() {
 	}
@@ -35,12 +36,22 @@ public class ModelMetricEvaluation implements Evaluation {
 	 * @return the evaluation on a CSV-string
 	 */
 	public String toCsvString() {
-		String csvString = name + CSV_SEPARATION_SIGN + unidirectionalRef + CSV_SEPARATION_SIGN + oppositeRef + CSV_SEPARATION_SIGN
-				+ numberOfMetaclasses + CSV_SEPARATION_SIGN + numberOfReferences + CSV_SEPARATION_SIGN
-				+ numberOfAttributes + CSV_SEPARATION_SIGN + dit + CSV_SEPARATION_SIGN + hagg + CSV_SEPARATION_SIGN
-				+ maintainability + CSV_SEPARATION_SIGN + understandability + CSV_SEPARATION_SIGN + complexity
-				+ CSV_SEPARATION_SIGN + metamodelReuse + CSV_SEPARATION_SIGN + relaxationIndexOfMetamodel
-				+ CSV_SEPARATION_SIGN;
+		String csvString;
+		if (time < 0) {
+			csvString = name + CSV_SEPARATION_SIGN + unidirectionalRef + CSV_SEPARATION_SIGN + oppositeRef
+					+ CSV_SEPARATION_SIGN + numberOfMetaclasses + CSV_SEPARATION_SIGN + numberOfReferences
+					+ CSV_SEPARATION_SIGN + numberOfAttributes + CSV_SEPARATION_SIGN + dit + CSV_SEPARATION_SIGN + hagg
+					+ CSV_SEPARATION_SIGN + maintainability + CSV_SEPARATION_SIGN + understandability
+					+ CSV_SEPARATION_SIGN + complexity + CSV_SEPARATION_SIGN + metamodelReuse + CSV_SEPARATION_SIGN
+					+ relaxationIndexOfMetamodel + CSV_SEPARATION_SIGN + CSV_SEPARATION_SIGN;
+		} else {
+			csvString = name + CSV_SEPARATION_SIGN + unidirectionalRef + CSV_SEPARATION_SIGN + oppositeRef
+					+ CSV_SEPARATION_SIGN + numberOfMetaclasses + CSV_SEPARATION_SIGN + numberOfReferences
+					+ CSV_SEPARATION_SIGN + numberOfAttributes + CSV_SEPARATION_SIGN + dit + CSV_SEPARATION_SIGN + hagg
+					+ CSV_SEPARATION_SIGN + maintainability + CSV_SEPARATION_SIGN + understandability
+					+ CSV_SEPARATION_SIGN + complexity + CSV_SEPARATION_SIGN + metamodelReuse + CSV_SEPARATION_SIGN
+					+ relaxationIndexOfMetamodel + CSV_SEPARATION_SIGN + time + CSV_SEPARATION_SIGN;
+		}
 		return csvString.replace("null", "");
 	}
 
@@ -146,6 +157,14 @@ public class ModelMetricEvaluation implements Evaluation {
 
 	public void setOppositeRef(Integer oppositeRef) {
 		this.oppositeRef = oppositeRef;
+	}
+
+	public int getTime() {
+		return time;
+	}
+
+	public void setTime(int time) {
+		this.time = time;
 	}
 
 }

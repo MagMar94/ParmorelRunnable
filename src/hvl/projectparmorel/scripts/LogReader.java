@@ -7,7 +7,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
+import javax.swing.JFileChooser;
+
 public abstract class LogReader {
+	
+	protected static final JFileChooser fc = new JFileChooser();
+	
 	/**
 	 * Reads the log file and returns the content as a String
 	 * 

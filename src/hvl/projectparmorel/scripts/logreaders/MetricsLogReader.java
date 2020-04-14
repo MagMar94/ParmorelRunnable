@@ -1,10 +1,14 @@
 package hvl.projectparmorel.scripts.logreaders;
 
+import java.awt.EventQueue;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -25,17 +29,40 @@ public class MetricsLogReader extends LogReader {
 	private static String beforeEvaluationString = "---------------------------------------------------\n";
 	private static String afterEvaluationString = "---------------------------------------------------\n";
 
-	private static final JFileChooser fc = new JFileChooser();
-
+	/**
+	 * Gets all the time from the log files, and all the metrics and combines them to a CSV.
+	 * 
+	 * The output should be the same order as the execution.
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
+		List<ModelStrategyEvaluation> timeEvaluations = TimeLogReader.getTimeEvaluations(fc);
+		
 		System.out.println("Getting log file...");
 		File file = getLogFile();
 		if (file != null) {
 			if (file.getName().endsWith(".txt")) {
-				System.out.println("Intepreting log...");
-				List<Evaluation> evaluations = interpretLog(file);
+				System.out.println("Intepreting metrics log...");
+				List<Evaluation> metricEvaluations = interpretMetricLog(file);
+				Map<String, ModelMetricEvaluation> metricEvaluationMap = getMetricEvaluationMap(metricEvaluations);
+				
+				List<Evaluation> finalEvaluations = new ArrayList<>();
+				for(ModelStrategyEvaluation timeEvaluation : timeEvaluations) {
+					if(metricEvaluationMap.containsKey(timeEvaluation.getName())) {
+						ModelMetricEvaluation evaluation = metricEvaluationMap.get(timeEvaluation.getName());
+						evaluation.setTime(timeEvaluation.getTime());
+						finalEvaluations.add(evaluation);
+					} else {
+						ModelMetricEvaluation evaluation = new ModelMetricEvaluation();
+						evaluation.setName(timeEvaluation.getName());
+						evaluation.setTime(timeEvaluation.getTime());
+						finalEvaluations.add(evaluation);
+					}
+				}
+
 				System.out.println("Generating csv...");
-				String csvString = generateCSVStringFrom(evaluations);
+				String csvString = generateCSVStringFrom(finalEvaluations);
 				System.out.println("Getting destination file...");
 				File saveFile = getDestinationFile();
 				if (saveFile != null) {
@@ -50,15 +77,32 @@ public class MetricsLogReader extends LogReader {
 		System.exit(0);
 	}
 
+	private static int logFileSelectedOption;
 	/**
 	 * Gets the log file to read
 	 * 
 	 * @return the file to lread
 	 */
 	private static File getLogFile() {
-		int returnVal = fc.showOpenDialog(null);
+		fc.setDialogTitle("Select the metric log");
+		fc.setMultiSelectionEnabled(false);
+		fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
+//		int returnVal = fc.showOpenDialog(null);
 
-		if (returnVal == JFileChooser.APPROVE_OPTION) {
+		try {
+			EventQueue.invokeAndWait(new Runnable() {
+			    @Override
+			    public void run() {
+			    	logFileSelectedOption = fc.showOpenDialog(null);
+			    }
+			});
+		} catch (InvocationTargetException e) {
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		if (logFileSelectedOption == JFileChooser.APPROVE_OPTION) {
 			return fc.getSelectedFile();
 		} else {
 			System.out.println("Cancelled by user.");
@@ -72,7 +116,7 @@ public class MetricsLogReader extends LogReader {
 	 * @param logFile
 	 * @return a list of model evaluations
 	 */
-	private static List<Evaluation> interpretLog(File logFile) {
+	private static List<Evaluation> interpretMetricLog(File logFile) {
 		List<Evaluation> evaluations = new ArrayList<>();
 
 		String log = readLog(logFile);
@@ -83,7 +127,7 @@ public class MetricsLogReader extends LogReader {
 			while (matcher.find()) {
 				String modelEvaluationString = matcher.group(1);
 				ModelMetricEvaluation evaluation = new ModelMetricEvaluation();
-				evaluation.setName(findNameForModel(modelEvaluationString));
+				evaluation.setName(convertToPureModelName(findNameForModel(modelEvaluationString)));
 				evaluation.setNumberOfMetaclasses(findNumberOfMetaclassesFrom(modelEvaluationString));
 				evaluation.setNumberOfReferences(findNumberOfReferencesFrom(modelEvaluationString));
 				evaluation.setNumberOfAttributes(findNumberOfAttributesFrom(modelEvaluationString));
@@ -102,6 +146,25 @@ public class MetricsLogReader extends LogReader {
 		}
 
 		return evaluations;
+	}
+	
+	/**
+	 * Puts the evaluations in a map from the model name to the evaluation
+	 * 
+	 * @param evaluations
+	 * @return a map mapping from model name to evaluation
+	 */
+	private static Map<String, ModelMetricEvaluation> getMetricEvaluationMap(List<Evaluation> evaluations){
+		Map<String, ModelMetricEvaluation> metricMap = new HashMap<>();
+		
+		for(Evaluation evaluation : evaluations) {
+			if(evaluation instanceof ModelMetricEvaluation) {
+				ModelMetricEvaluation e = (ModelMetricEvaluation) evaluation;
+				metricMap.put(e.getName(), e);
+			}
+			
+		}
+		return metricMap;
 	}
 
 	/**
@@ -313,6 +376,21 @@ public class MetricsLogReader extends LogReader {
 			return Double.parseDouble(number);
 		}
 		return null;
+	}
+
+	/**
+	 * The names of the models are different in the logs. One log uses the whole
+	 * path, and the other uses just the name. Additionally, one of them is based on
+	 * the repaired model name, and the other the original name. The repaired
+	 * version starts with an integer and an underscore, so we assume everything
+	 * after the underscore is the original name.
+	 * 
+	 * @param modelName
+	 * @return the assumed file name for the model in the time log
+	 */
+	private static String convertToPureModelName(String modelName) {
+		int lastUnderscoreIndex = modelName.lastIndexOf("_");
+		return modelName.substring(lastUnderscoreIndex + 1);
 	}
 
 	/**

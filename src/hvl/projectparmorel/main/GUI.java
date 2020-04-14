@@ -226,7 +226,7 @@ public class GUI extends JPanel {
 		unsupportedErrors.add(4);
 		unsupportedErrors.add(6);
 		ErrorExtractor errorExtractor = new EcoreErrorExtractor(unsupportedErrors);
-		errors = errorExtractor.extractErrorsFrom(auxModel);
+		errors = errorExtractor.extractErrorsFrom(auxModel, false);
 //		ql.nuQueue = errors;
 		
 

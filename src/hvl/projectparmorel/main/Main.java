@@ -96,7 +96,7 @@ public class Main {
 			unsupportedErrors.add(4);
 			unsupportedErrors.add(6);
 			ErrorExtractor errorExtractor = new EcoreErrorExtractor(unsupportedErrors);
-			List<Error> errors = errorExtractor.extractErrorsFrom(auxModel);
+			List<Error> errors = errorExtractor.extractErrorsFrom(auxModel, false);
 
 			System.out.println("INITIAL ERRORS:");
 			System.out.println(errors.toString());
