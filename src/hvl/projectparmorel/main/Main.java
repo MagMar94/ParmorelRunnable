@@ -4,10 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Files;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -26,6 +23,7 @@ import hvl.projectparmorel.ecore.EcoreQModelFixer;
 import hvl.projectparmorel.exceptions.NoErrorsInModelException;
 import hvl.projectparmorel.general.ErrorExtractor;
 import hvl.projectparmorel.general.ModelFixer;
+import hvl.projectparmorel.general.ModelType;
 import hvl.projectparmorel.utils.ParmorelUtils;
 import hvl.projectparmorel.general.Error;
 
@@ -92,10 +90,9 @@ public class Main {
 			System.out.println("----------------------------------------------------------------------");
 			System.out.println("----------------------------------------------------------------------");
 
-			Set<Integer> unsupportedErrors = new HashSet<>();
-			unsupportedErrors.add(4);
-			unsupportedErrors.add(6);
-			ErrorExtractor errorExtractor = new EcoreErrorExtractor(unsupportedErrors);
+			ModelType.ECORE.addUnsupportedErrorCode(4);
+			ModelType.ECORE.addUnsupportedErrorCode(6);
+			ErrorExtractor errorExtractor = new EcoreErrorExtractor();
 			List<Error> errors = errorExtractor.extractErrorsFrom(auxModel, false);
 
 			System.out.println("INITIAL ERRORS:");

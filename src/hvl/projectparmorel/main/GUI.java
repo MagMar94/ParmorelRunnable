@@ -6,10 +6,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 import javax.swing.*;
 
 import org.eclipse.emf.common.util.EList;
@@ -26,7 +23,9 @@ import hvl.projectparmorel.ecore.EcoreQModelFixer;
 import hvl.projectparmorel.exceptions.NoErrorsInModelException;
 import hvl.projectparmorel.general.ErrorExtractor;
 import hvl.projectparmorel.general.ModelFixer;
+import hvl.projectparmorel.general.ModelType;
 import hvl.projectparmorel.modelrepair.Solution;
+import hvl.projectparmorel.reward.PreferenceOption;
 import hvl.projectparmorel.general.Error;
 
 public class GUI extends JPanel {
@@ -222,10 +221,12 @@ public class GUI extends JPanel {
 //		auxModel.getContents().addAll(EcoreUtil.copyAll(myMetaModel.getContents()));
 		Resource auxModel = copy(myMetaModel, uri);
 		
-		Set<Integer> unsupportedErrors = new HashSet<>();
-		unsupportedErrors.add(4);
-		unsupportedErrors.add(6);
-		ErrorExtractor errorExtractor = new EcoreErrorExtractor(unsupportedErrors);
+		ModelType.ECORE.addUnsupportedErrorCode(4);
+		ModelType.ECORE.addUnsupportedErrorCode(6);
+//		Set<Integer> unsupportedErrors = new HashSet<>();
+//		unsupportedErrors.add(4);
+//		unsupportedErrors.add(6);
+		ErrorExtractor errorExtractor = new EcoreErrorExtractor();
 		errors = errorExtractor.extractErrorsFrom(auxModel, false);
 //		ql.nuQueue = errors;
 		
@@ -238,18 +239,18 @@ public class GUI extends JPanel {
 
 	void repairButtonPressed() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
 			NoSuchMethodException, SecurityException, IOException {
-		List<Integer> preferences = new ArrayList<>();
+		List<PreferenceOption> preferences = new ArrayList<>();
 		if (groupSeq.getSelection() != null) {
-			preferences.add(Integer.parseInt(groupSeq.getSelection().getActionCommand()));
+			preferences.add(PreferenceOption.valueOfID(Integer.parseInt(groupSeq.getSelection().getActionCommand())));
 		}
 		if (groupHierar.getSelection() != null) {
-			preferences.add(Integer.parseInt(groupHierar.getSelection().getActionCommand()));
+			preferences.add(PreferenceOption.valueOfID(Integer.parseInt(groupHierar.getSelection().getActionCommand())));
 		}
 		if (groupMod.getSelection() != null) {
-			preferences.add(Integer.parseInt(groupMod.getSelection().getActionCommand()));
+			preferences.add(PreferenceOption.valueOfID(Integer.parseInt(groupMod.getSelection().getActionCommand())));
 		}
 		if (tag4.isSelected()) {
-			preferences.add(Integer.parseInt(tag4.getActionCommand()));
+			preferences.add(PreferenceOption.valueOfID(Integer.parseInt(tag4.getActionCommand())));
 		}
 		long startTime = System.currentTimeMillis();
 		long endTime = 0;

@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import hvl.projectparmorel.knowledge.Knowledge;
+import hvl.projectparmorel.reward.PreferenceOption;
 
 public class ParmorelUtils {
 
@@ -35,22 +36,22 @@ public class ParmorelUtils {
 	 *             always return the same settings.
 	 * @return settings for the user, null if undefined user
 	 */
-	public static List<Integer> generateUserSettings(int user) {
+	public static List<PreferenceOption> generateUserSettings(int user) {
 		switch (user) {
 		case 0:
-			return new ArrayList<Integer>(Arrays.asList(new Integer[] { 2, 4 }));
+			return new ArrayList<PreferenceOption>(Arrays.asList(new PreferenceOption[] { PreferenceOption.REPAIR_HIGH_IN_CONTEXT_HIERARCHY, PreferenceOption.PUNISH_DELETION }));
 		case 1:
-			return new ArrayList<Integer>(Arrays.asList(new Integer[] { 0, 2 }));
+			return new ArrayList<PreferenceOption>(Arrays.asList(new PreferenceOption[] { PreferenceOption.SHORT_SEQUENCES_OF_ACTIONS, PreferenceOption.REPAIR_HIGH_IN_CONTEXT_HIERARCHY }));
 		case 2:
-			return new ArrayList<Integer>(Arrays.asList(new Integer[] { 1, 3, 6 }));
+			return new ArrayList<PreferenceOption>(Arrays.asList(new PreferenceOption[] { PreferenceOption.LONG_SEQUENCES_OF_ACTIONS, PreferenceOption.REPAIR_LOW_IN_CONTEXT_HIERARCHY, PreferenceOption.REWARD_MODIFICATION_OF_MODEL }));
 		case 3:
-			return new ArrayList<Integer>(Arrays.asList(new Integer[] { 4 }));
+			return new ArrayList<PreferenceOption>(Arrays.asList(new PreferenceOption[] { PreferenceOption.PUNISH_DELETION }));
 		case 4:
-			return new ArrayList<Integer>(Arrays.asList(new Integer[] { 0, 4, 5 }));
+			return new ArrayList<PreferenceOption>(Arrays.asList(new PreferenceOption[] { PreferenceOption.SHORT_SEQUENCES_OF_ACTIONS, PreferenceOption.PUNISH_DELETION, PreferenceOption.PUNISH_MODIFICATION_OF_MODEL }));
 		case 5:
-			return new ArrayList<Integer>(Arrays.asList(new Integer[] { 1, 5 }));
+			return new ArrayList<PreferenceOption>(Arrays.asList(new PreferenceOption[] { PreferenceOption.LONG_SEQUENCES_OF_ACTIONS, PreferenceOption.PUNISH_MODIFICATION_OF_MODEL }));
 		case 6:
-			return new ArrayList<Integer>(Arrays.asList(new Integer[] { 2 }));
+			return new ArrayList<PreferenceOption>(Arrays.asList(new PreferenceOption[] { PreferenceOption.REPAIR_HIGH_IN_CONTEXT_HIERARCHY }));
 		default:
 			return null;
 		}

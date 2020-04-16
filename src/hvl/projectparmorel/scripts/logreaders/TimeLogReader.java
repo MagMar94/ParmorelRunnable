@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -67,7 +68,8 @@ public class TimeLogReader extends LogReader {
 		File topFolder = getLogFile(fc);
 		if (topFolder != null && topFolder.isDirectory()) {
 			File[] subFiles = topFolder.listFiles();
-
+			Arrays.sort(subFiles, new ModelFolderNameComparator());
+			
 			List<ModelStrategyEvaluation> evaluations = new ArrayList<>();
 			for (File file : subFiles) {
 				if (file.isDirectory()) {

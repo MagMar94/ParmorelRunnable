@@ -1,4 +1,5 @@
-package hvl.projectparmorel.main;
+
+ package hvl.projectparmorel.main;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -36,11 +37,11 @@ public class TestDifferentModelSelectionMethods {
 		experiments.add(new BestWeightStrategy(fixedModelFolderName));
 		experiments.add(new ClosestDistanceStrategy(fixedModelFolderName));
 		experiments.add(new BestWeightStrategy02(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy045(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy136(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy15(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy2(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy4(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy045(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy136(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy15(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy2(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy4(fixedModelFolderName));
 		
 		long startTime = System.currentTimeMillis();
 		for(Strategy experiment : experiments) {
