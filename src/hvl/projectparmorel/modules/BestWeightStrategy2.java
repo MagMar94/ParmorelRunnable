@@ -29,7 +29,7 @@ public class BestWeightStrategy2 extends Strategy {
 			return null;
 		}
 		
-		Solution optimalSolution = possibleSolutions.get(6);
+		Solution optimalSolution = possibleSolutions.get(0);
 		
 		for(int i = 1; i < possibleSolutions.size(); i++) {
 			if(possibleSolutions.get(i).getWeight() > optimalSolution.getWeight()) {

@@ -25,6 +25,7 @@ import hvl.projectparmorel.utils.ParmorelUtils;
 public abstract class Strategy {
 
 	private String fixedModelFolderName;
+	private long experimentTime;
 
 	/**
 	 * @param experimentSpecificModelFolderName - the name of the folder to store
@@ -90,26 +91,30 @@ public abstract class Strategy {
 
 				if (!solutions.isEmpty()) {
 					Solution solution = selectSolution(solutions);
-					solution.reward(true);
+					if (solution != null) {
+						solution.reward(true);
 
-					File knowledgeFile = new File(Knowledge.KNOWLEDGE_FILE_NAME);
-					File fixedModelFile = new File(fixedModelFolderName + "/" + i + "_" + brokenModels[i].getName());
-					try {
-						Files.copy(solution.getModel().toPath(), fixedModelFile.toPath());
-						Files.copy(knowledgeFile.toPath(),
-								new File(iterationSpecificFolderName + "/" + knowledgeFile.getName()).toPath());
-						for (Solution s : solutions) {
-							s.getModel().delete();
+						File knowledgeFile = new File(Knowledge.KNOWLEDGE_FILE_NAME);
+						File fixedModelFile = new File(
+								fixedModelFolderName + "/" + i + "_" + brokenModels[i].getName());
+						try {
+							Files.copy(solution.getModel().toPath(), fixedModelFile.toPath());
+							Files.copy(knowledgeFile.toPath(),
+									new File(iterationSpecificFolderName + "/" + knowledgeFile.getName()).toPath());
+							for (Solution s : solutions) {
+								s.getModel().delete();
+							}
+						} catch (IOException e) {
+							e.printStackTrace();
 						}
-					} catch (IOException e) {
-						e.printStackTrace();
+					} else {
+						logger.info("No solution chosen.");
 					}
 				}
 			} catch (NoErrorsInModelException e) {
 				logger.info("No errors found in " + brokenModels[i].getAbsolutePath());
 			} catch (Exception e) {
-				logger.severe(e.getLocalizedMessage() + "\nStack trace:\n"
-						+ ExceptionUtils.readStackTrace(e));
+				logger.severe(e.getLocalizedMessage() + "\nStack trace:\n" + ExceptionUtils.readStackTrace(e));
 				if (solutions != null) {
 					for (Solution s : solutions) {
 						s.getModel().delete();
@@ -149,5 +154,32 @@ public abstract class Strategy {
 	 * @return chosen solution.
 	 */
 	protected abstract Solution selectSolution(List<Solution> possibleSolutions);
+
+	/**
+	 * Get time it took to complete the experiment
+	 * 
+	 * @return
+	 */
+	public long getExperimentTime() {
+		return experimentTime;
+	}
+
+	/**
+	 * Set the time it took to complete the experiment
+	 * 
+	 * @param experimentTime
+	 */
+	public void setExperimentTime(long experimentTime) {
+		this.experimentTime = experimentTime;
+	}
+
+	/**
+	 * Gets the name of the folder the results are saved to
+	 * 
+	 * @return the name of the folder the results are saved to
+	 */
+	public String getFolderName() {
+		return fixedModelFolderName;
+	}
 
 }

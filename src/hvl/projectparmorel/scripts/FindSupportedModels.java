@@ -37,13 +37,15 @@ public class FindSupportedModels {
 	private static FileHandler fh;
 	private static JFileChooser fc;
 	private static List<File> supportedModels;
-	
+
 	public static void main(String[] args) {
 		fc = new JFileChooser();
 		supportedModels = new ArrayList<>();
-		List<Evaluation> evaluations = getTimeEvaluations(fc);
-		
+		List<Evaluation> evaluations = getEvaluations(fc);
+
 		File destinationFolder = getDestinationFolder(fc);
+		if(!destinationFolder.exists())
+			destinationFolder.mkdir();
 		for (File f : supportedModels) {
 			try {
 				Files.copy(f.toPath(), new File(destinationFolder + "/" + f.getName()).toPath());
@@ -69,63 +71,71 @@ public class FindSupportedModels {
 	 * 
 	 * @return of all the evaluatons
 	 */
-	public static List<Evaluation> getTimeEvaluations(JFileChooser fc) {
+	public static List<Evaluation> getEvaluations(JFileChooser fc) {
 		initializeLogger();
 
 		System.out.println("Getting model folder...");
 		File[] models = getModels(fc);
 
-		ErrorExtractor errorExtractor = new EcoreErrorExtractor();
-
-		ResourceSet resourceSet = new ResourceSetImpl();
-		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore",
-				new EcoreResourceFactoryImpl());
+		List<Evaluation> evaluations = new ArrayList<>();
 
 		Knowledge knowledge = new Knowledge();
-
-		List<Evaluation> evaluations = new ArrayList<>();
 		
 		for (File modelFile : models) {
-			URI uri = URI.createFileURI(modelFile.getAbsolutePath());
-			Resource modelResource = resourceSet.getResource(uri, true);
-			Model model = new EcoreModel(resourceSet, modelResource, uri);
+			if (modelFile.getName().contains("ecore")) {
+				System.out.println("Model: " + modelFile.getName());
+				ErrorExtractor errorExtractor = new EcoreErrorExtractor();
 
-			List<Error> allErrors = errorExtractor.extractErrorsFrom(modelResource, true);
-			List<Error> unsupportedErrors = new ArrayList<>();
-			for(Error e : allErrors) {
-				if(ModelType.ECORE.doesNotSupportError(e.getCode())) {
-					unsupportedErrors.add(e);
-				}
-			}
-			allErrors.removeAll(unsupportedErrors);
-			
-			if (!allErrors.isEmpty()) {
-				ModelProcessor modelProcessor = new EcoreModelProcessor(knowledge);
-				Set<Integer> unsupportedErrorsCodes = modelProcessor.initializeQTableForErrorsInModel(model);
-				for (Integer code : unsupportedErrorsCodes) {
-					model.getModelType().addUnsupportedErrorCode(code);
-				}
+				ResourceSet resourceSet = new ResourceSetImpl();
+				resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore",
+						new EcoreResourceFactoryImpl());
 
-				List<Error> supportedErrors = new ArrayList<>();
-				supportedErrors.addAll(allErrors);
-				for (Error error : supportedErrors) {
-					if (unsupportedErrorsCodes.contains(error.getCode())) {
-						unsupportedErrors.add(error);
+				URI uri = URI.createFileURI(modelFile.getAbsolutePath());
+				Resource modelResource = resourceSet.getResource(uri, true);
+				Model model = new EcoreModel(resourceSet, modelResource, uri);
+
+				List<Error> allErrors = errorExtractor.extractErrorsFrom(model.getRepresentationCopy(), true);
+				List<Error> unsupportedErrors = new ArrayList<>();
+				System.out.println("Ectracted errors: " + allErrors.toString());
+				for (Error e : allErrors) {
+					if (ModelType.ECORE.doesNotSupportError(e.getCode())) {
+						System.out.println(e.getCode() + " is not supported.");
+						unsupportedErrors.add(e);
 					}
 				}
-				supportedErrors.removeAll(unsupportedErrors);
-				if (unsupportedErrors.isEmpty()) {
-					supportedModels.add(modelFile);
-				}
-				evaluations.add(new ModelEval(modelFile.getName(), supportedErrors, unsupportedErrors));
-			} else {
-				evaluations.add(new ModelEval(modelFile.getName(), new ArrayList<>(), unsupportedErrors));
-			}
+				allErrors.removeAll(unsupportedErrors);
 
+				if (!allErrors.isEmpty()) {
+					System.out.println("Analyzing model.");
+					ModelProcessor modelProcessor = new EcoreModelProcessor(knowledge);
+					Set<Integer> unsupportedErrorsCodes = modelProcessor.initializeQTableForErrorsInModel(model);
+					System.out.println("Unsupported errors: " + unsupportedErrorsCodes.toString());
+					for (Integer code : unsupportedErrorsCodes) {
+						System.out.println(code + " is not supported.");
+						model.getModelType().addUnsupportedErrorCode(code);
+					}
+
+					List<Error> supportedErrors = new ArrayList<>();
+					supportedErrors.addAll(allErrors);
+					for (Error error : supportedErrors) {
+						if (unsupportedErrorsCodes.contains(error.getCode())) {
+							unsupportedErrors.add(error);
+						}
+					}
+					supportedErrors.removeAll(unsupportedErrors);
+					if (unsupportedErrors.isEmpty()) {
+						supportedModels.add(modelFile);
+					}
+					evaluations.add(new ModelEval(modelFile.getName(), supportedErrors, unsupportedErrors));
+				} else {
+					evaluations.add(new ModelEval(modelFile.getName(), new ArrayList<>(), unsupportedErrors));
+				}
+				System.out.println("Evaluation of model complete \n\n");
+			}
 		}
-		
+
 		return evaluations;
-}
+	}
 
 	private static void initializeLogger() {
 		logger = Logger.getLogger("SupportedModels");
@@ -208,7 +218,7 @@ public class FindSupportedModels {
 			return null;
 		}
 	}
-	
+
 	/**
 	 * Generates a CSV-string from the evaluations.
 	 * 

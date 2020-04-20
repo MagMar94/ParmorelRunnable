@@ -5,6 +5,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import hvl.projectparmorel.ecore.EcoreSolution;
+import hvl.projectparmorel.modelrepair.Solution;
 import hvl.projectparmorel.modules.BestWeightStrategy;
 import hvl.projectparmorel.modules.BestWeightStrategy02;
 import hvl.projectparmorel.modules.BestWeightStrategy045;
@@ -26,7 +28,7 @@ public class TestDifferentModelSelectionMethods {
 		File originalModelsFolder = new File(originalModelsFolderName);
 		File[] brokenModels = originalModelsFolder.listFiles();
 		brokenModels = ParmorelUtils.removeFilesThatAreNotEcore(brokenModels);
-
+		
 		String fixedModelFolderName = FILE_PREFIX + "differentSelectionMethodsFixed";
 		File experimentResultFolder = new File(fixedModelFolderName);
 		if(!experimentResultFolder.exists()) {
@@ -34,20 +36,22 @@ public class TestDifferentModelSelectionMethods {
 		}
 		
 		List<Strategy> experiments = new ArrayList<>();
-		experiments.add(new BestWeightStrategy(fixedModelFolderName));
+//		experiments.add(new BestWeightStrategy(fixedModelFolderName));
 		experiments.add(new ClosestDistanceStrategy(fixedModelFolderName));
-		experiments.add(new BestWeightStrategy02(fixedModelFolderName));
-		experiments.add(new BestWeightStrategy045(fixedModelFolderName));
-		experiments.add(new BestWeightStrategy136(fixedModelFolderName));
-		experiments.add(new BestWeightStrategy15(fixedModelFolderName));
-		experiments.add(new BestWeightStrategy2(fixedModelFolderName));
-		experiments.add(new BestWeightStrategy4(fixedModelFolderName));
+//		experiments.add(new BestWeightStrategy02(fixedModelFolderName));
+//		experiments.add(new BestWeightStrategy045(fixedModelFolderName));
+//		experiments.add(new BestWeightStrategy136(fixedModelFolderName));
+//		experiments.add(new BestWeightStrategy15(fixedModelFolderName));
+//		experiments.add(new BestWeightStrategy2(fixedModelFolderName));
+//		experiments.add(new BestWeightStrategy4(fixedModelFolderName));
 		
 		long startTime = System.currentTimeMillis();
 		for(Strategy experiment : experiments) {
+			long experimentStartTime = System.currentTimeMillis();
 			System.out.println("Starting new experiment: " + experiment.getClass().getName());
 			ParmorelUtils.deleteExistingKnowledge();
 			experiment.repairModels(brokenModels);
+			experiment.setExperimentTime(System.currentTimeMillis() - experimentStartTime);
 		}
 		long endTime = System.currentTimeMillis();
 		long executionTimme = (endTime - startTime);
@@ -58,5 +62,8 @@ public class TestDifferentModelSelectionMethods {
 		
 		System.out.println("TOTAL TIME: " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds and " + millis + " ms. (" + executionTimme + " ms)");
 		
+		for(Strategy experiment : experiments) {
+			System.out.println("Time for experiment " + experiment.getFolderName() + ": " + experiment.getExperimentTime() + " ms");
+		}
 	}
 }
