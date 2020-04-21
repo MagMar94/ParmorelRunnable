@@ -67,6 +67,7 @@ public class ClosestDistanceStrategy extends Strategy {
 	protected ModelFixer getModelFixer() {
 		List<PreferenceOption> preferences = new ArrayList<PreferenceOption>();
 		preferences.add(PreferenceOption.PREFER_CLOSE_DISTANCE_TO_ORIGINAL);
+		preferences.add(PreferenceOption.PUNISH_DELETION);
 		return new EcoreQModelFixer(preferences);
 	}
 
