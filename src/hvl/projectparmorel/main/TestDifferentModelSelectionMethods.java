@@ -5,8 +5,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import hvl.projectparmorel.ecore.EcoreSolution;
-import hvl.projectparmorel.modelrepair.Solution;
 import hvl.projectparmorel.modules.BestWeightStrategy;
 import hvl.projectparmorel.modules.BestWeightStrategy02;
 import hvl.projectparmorel.modules.BestWeightStrategy045;
@@ -36,14 +34,14 @@ public class TestDifferentModelSelectionMethods {
 		}
 		
 		List<Strategy> experiments = new ArrayList<>();
-//		experiments.add(new BestWeightStrategy(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy(fixedModelFolderName));
 		experiments.add(new ClosestDistanceStrategy(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy02(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy045(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy136(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy15(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy2(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy4(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy02(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy045(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy136(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy15(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy2(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy4(fixedModelFolderName));
 		
 		long startTime = System.currentTimeMillis();
 		for(Strategy experiment : experiments) {
