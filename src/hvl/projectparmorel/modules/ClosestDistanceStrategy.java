@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import hvl.projectparmorel.ecore.EcoreQModelFixer;
+import hvl.projectparmorel.exceptions.DistanceUnavailableException;
 import hvl.projectparmorel.general.ModelFixer;
 import hvl.projectparmorel.modelrepair.Solution;
 import hvl.projectparmorel.reward.PreferenceOption;
@@ -27,25 +28,31 @@ public class ClosestDistanceStrategy extends Strategy {
 		}
 
 		Solution optimalSolution = possibleSolutions.get(0);
-		double shortestFromOriginal = optimalSolution.calculateDistanceFromOriginal();
-
-		for (int i = 1; i < possibleSolutions.size(); i++) {
-			double distanceFromOriginal = possibleSolutions.get(i).calculateDistanceFromOriginal();
-			if (!isMeasurable(shortestFromOriginal) && isMeasurable(distanceFromOriginal)) {
-				shortestFromOriginal = distanceFromOriginal;
-				optimalSolution = possibleSolutions.get(i);
-			} else if (isMeasurable(distanceFromOriginal)
-					&& ((distanceFromOriginal < shortestFromOriginal || !isMeasurable(shortestFromOriginal)))) {
-				optimalSolution = possibleSolutions.get(i);
-				shortestFromOriginal = distanceFromOriginal;
-			} else if (shortestFromOriginal == distanceFromOriginal
-					&& optimalSolution.getWeight() > possibleSolutions.get(i).getWeight()) {
-				optimalSolution = possibleSolutions.get(i);
+		double shortestFromOriginal;
+		try {
+			shortestFromOriginal = optimalSolution.calculateDistanceFromOriginal();
+			for (int i = 1; i < possibleSolutions.size(); i++) {
+				double distanceFromOriginal = possibleSolutions.get(i).calculateDistanceFromOriginal();
+				if (!isMeasurable(shortestFromOriginal) && isMeasurable(distanceFromOriginal)) {
+					shortestFromOriginal = distanceFromOriginal;
+					optimalSolution = possibleSolutions.get(i);
+				} else if (isMeasurable(distanceFromOriginal)
+						&& ((distanceFromOriginal < shortestFromOriginal || !isMeasurable(shortestFromOriginal)))) {
+					optimalSolution = possibleSolutions.get(i);
+					shortestFromOriginal = distanceFromOriginal;
+				} else if (shortestFromOriginal == distanceFromOriginal
+						&& optimalSolution.getWeight() > possibleSolutions.get(i).getWeight()) {
+					optimalSolution = possibleSolutions.get(i);
+				}
 			}
+			if (!isMeasurable(shortestFromOriginal)) {
+				return null;
+			}
+		} catch (DistanceUnavailableException e) {
+			// Could not measure distance
 		}
-		if (!isMeasurable(shortestFromOriginal)) {
-			return null;
-		}
+
+		
 
 		return optimalSolution;
 	}
