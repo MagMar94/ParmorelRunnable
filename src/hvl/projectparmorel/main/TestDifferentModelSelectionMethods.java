@@ -15,6 +15,7 @@ import hvl.projectparmorel.modules.BestWeightStrategy15;
 import hvl.projectparmorel.modules.BestWeightStrategy2;
 import hvl.projectparmorel.modules.BestWeightStrategy4;
 import hvl.projectparmorel.modules.ClosestDistanceStrategy;
+import hvl.projectparmorel.modules.MaintainabilityStrategy;
 import hvl.projectparmorel.modules.Strategy;
 import hvl.projectparmorel.utils.ParmorelUtils;
 
@@ -23,8 +24,9 @@ public class TestDifferentModelSelectionMethods {
 	public static final String FILE_PREFIX = "././";
 
 	public static void main(String[] args) {
-		ParmorelUtils.deleteExistingKnowledge();
-		String originalModelsFolderName = FILE_PREFIX + "differentSelectionMethodsOriginals";
+		//ParmorelUtils.deleteExistingKnowledge();
+		//differentSelectionMethodsOriginals
+		String originalModelsFolderName = FILE_PREFIX + "maintainability";
 		File originalModelsFolder = new File(originalModelsFolderName);
 		File[] brokenModels = originalModelsFolder.listFiles();
 		brokenModels = ParmorelUtils.removeFilesThatAreNotEcore(brokenModels);
@@ -37,7 +39,9 @@ public class TestDifferentModelSelectionMethods {
 		
 		List<Strategy> experiments = new ArrayList<>();
 //		experiments.add(new BestWeightStrategy(fixedModelFolderName));
-		experiments.add(new ClosestDistanceStrategy(fixedModelFolderName));
+//		experiments.add(new ClosestDistanceStrategy(fixedModelFolderName));
+		experiments.add(new MaintainabilityStrategy(fixedModelFolderName));
+	
 //		experiments.add(new BestWeightStrategy02(fixedModelFolderName));
 //		experiments.add(new BestWeightStrategy045(fixedModelFolderName));
 //		experiments.add(new BestWeightStrategy136(fixedModelFolderName));
@@ -49,7 +53,7 @@ public class TestDifferentModelSelectionMethods {
 		for(Strategy experiment : experiments) {
 			long experimentStartTime = System.currentTimeMillis();
 			System.out.println("Starting new experiment: " + experiment.getClass().getName());
-			ParmorelUtils.deleteExistingKnowledge();
+			//ParmorelUtils.deleteExistingKnowledge();
 			experiment.repairModels(brokenModels);
 			experiment.setExperimentTime(System.currentTimeMillis() - experimentStartTime);
 		}
