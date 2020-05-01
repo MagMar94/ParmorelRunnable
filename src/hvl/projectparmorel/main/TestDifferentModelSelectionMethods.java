@@ -22,8 +22,6 @@ public class TestDifferentModelSelectionMethods {
 	public static final String FILE_PREFIX = "././";
 
 	public static void main(String[] args) {
-		//ParmorelUtils.deleteExistingKnowledge();
-		//differentSelectionMethodsOriginals
 		String originalModelsFolderName = FILE_PREFIX + "differentSelectionMethodsOriginals";
 		File originalModelsFolder = new File(originalModelsFolderName);
 		File[] brokenModels = originalModelsFolder.listFiles();
