@@ -18,14 +18,14 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 
+import hvl.projectparmorel.ModelFixer;
 import hvl.projectparmorel.ecore.EcoreErrorExtractor;
 import hvl.projectparmorel.ecore.EcoreQModelFixer;
 import hvl.projectparmorel.exceptions.NoErrorsInModelException;
-import hvl.projectparmorel.general.ErrorExtractor;
-import hvl.projectparmorel.general.ModelFixer;
-import hvl.projectparmorel.general.ModelType;
+import hvl.projectparmorel.qlearning.Error;
+import hvl.projectparmorel.qlearning.ErrorExtractor;
+import hvl.projectparmorel.qlearning.ModelType;
 import hvl.projectparmorel.utils.ParmorelUtils;
-import hvl.projectparmorel.general.Error;
 
 public class Main {
 

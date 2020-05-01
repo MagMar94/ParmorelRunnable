@@ -10,11 +10,12 @@ import java.util.logging.SimpleFormatter;
 
 import org.junit.platform.commons.util.ExceptionUtils;
 
+import hvl.projectparmorel.ModelFixer;
+import hvl.projectparmorel.Solution;
 import hvl.projectparmorel.ecore.EcoreQModelFixer;
 import hvl.projectparmorel.exceptions.NoErrorsInModelException;
-import hvl.projectparmorel.general.ModelFixer;
 import hvl.projectparmorel.knowledge.Knowledge;
-import hvl.projectparmorel.modelrepair.Solution;
+import hvl.projectparmorel.qlearning.QSolution;
 import hvl.projectparmorel.utils.ParmorelUtils;
 
 /**
@@ -91,8 +92,9 @@ public abstract class Strategy {
 
 				if (!solutions.isEmpty()) {
 //					Solution solution = selectSolution(solutions);
-					if (solution != null) {
-						solution.reward(true);
+					if (solution != null && solution instanceof QSolution) {
+						QSolution qSolution = (QSolution) solution;
+						qSolution.reward(true);
 
 						File knowledgeFile = new File(Knowledge.KNOWLEDGE_FILE_NAME);
 						File fixedModelFile = new File(
@@ -153,7 +155,7 @@ public abstract class Strategy {
 	 * @param possibleSolutions
 	 * @return chosen solution.
 	 */
-	protected abstract Solution selectSolution(List<Solution> possibleSolutions);
+	protected abstract QSolution selectSolution(List<QSolution> possibleSolutions);
 
 	/**
 	 * Get time it took to complete the experiment

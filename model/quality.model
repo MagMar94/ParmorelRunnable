@@ -32040,6 +32040,1056 @@
       <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.85234267"/>
       <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="408.0"/>
     </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="8.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="49.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="8.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="49.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="8.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="49.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="8.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="49.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="8.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="49.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="8.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="49.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="8.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="49.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="8.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="49.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="8.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="49.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="8.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="49.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="8.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="49.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="8.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2840909"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="41.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="8.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2840909"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="41.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="8.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="49.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="10.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2888889"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="45.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="8.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="49.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.2"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="12.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2857143"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="49.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="8.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="49.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.2"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="12.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2857143"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="49.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62634987"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6319149"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62634987"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6319149"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62634987"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62634987"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62197804"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.2"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62061405"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62197804"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.2"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62061405"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62197804"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.2"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62061405"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62197804"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.2"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62061405"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62197804"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.2"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62061405"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62197804"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.2"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62061405"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62197804"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62197804"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.2"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62061405"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62197804"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="8.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="49.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2826087"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2826087"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2826087"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2826087"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2795699"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://rcer.sf.net/rom/abapobj">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="16.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="1.5384616"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="16.538462"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.2826087"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="57.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.2"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62770563"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6319149"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6319149"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6319149"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.6"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6305733"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6319149"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62634987"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62634987"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62634987"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62634987"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62634987"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62634987"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62634987"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62634987"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62634987"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62634987"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62634987"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62634987"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/b3/2010/aggregator/1.0.0">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.4"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.5"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="59.5"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62634987"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="195.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="51.8"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.61744964"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62197804"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.2"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62061405"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62197804"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.2"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62061405"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62197804"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.2"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62061405"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62197804"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.2"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62061405"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.2"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62061405"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.2"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62061405"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62197804"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62197804"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.2"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62061405"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62197804"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.6160714"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
+    <qualityEvals evaluatedArtifact="http://www.eclipse.org/buckminster/2009/aggregator">
+      <qualityCharacteristics priority="1" name="Maintainability" varName="maintainability" value="52.0"/>
+      <qualityCharacteristics priority="2" name="Understandability" varName="understandability" value="2.425"/>
+      <qualityCharacteristics priority="3" name="Complexity" varName="complexity" value="60.425"/>
+      <qualityCharacteristics priority="4" name="Reusability" varName="reuse" value="0.62197804"/>
+      <qualityCharacteristics priority="5" name="Relaxation Index" varName="relaxationdegree" value="197.0"/>
+    </qualityEvals>
   </quality:QualityModel>
   <quality:QualityEvaluation evaluatedArtifact="uri://gmf/examples/eclipsecon"/>
   <quality:QualityEvaluation evaluatedArtifact="uri://gmf/examples/eclipsecon"/>

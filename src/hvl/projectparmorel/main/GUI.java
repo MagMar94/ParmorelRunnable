@@ -18,15 +18,16 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 
+import hvl.projectparmorel.ModelFixer;
+import hvl.projectparmorel.Solution;
 import hvl.projectparmorel.ecore.EcoreErrorExtractor;
 import hvl.projectparmorel.ecore.EcoreQModelFixer;
 import hvl.projectparmorel.exceptions.NoErrorsInModelException;
-import hvl.projectparmorel.general.ErrorExtractor;
-import hvl.projectparmorel.general.ModelFixer;
-import hvl.projectparmorel.general.ModelType;
-import hvl.projectparmorel.modelrepair.Solution;
+import hvl.projectparmorel.qlearning.Error;
+import hvl.projectparmorel.qlearning.ErrorExtractor;
+import hvl.projectparmorel.qlearning.ModelType;
+import hvl.projectparmorel.qlearning.QSolution;
 import hvl.projectparmorel.reward.PreferenceOption;
-import hvl.projectparmorel.general.Error;
 
 public class GUI extends JPanel {
 
@@ -259,14 +260,18 @@ public class GUI extends JPanel {
 		try {
 			Solution bestSolution = ql.fixModel(dest);
 			
+			
 			frame.getContentPane().removeAll();
 			frame.getContentPane().add(secondGUI());
 			frame.getContentPane().revalidate();
 			frame.getContentPane().repaint();
+			if(bestSolution instanceof QSolution) {
+				QSolution solution = (QSolution) bestSolution;
+				String seqFound = "Best sequence found to repair model " + files[0].getName() + ":"
+						+ System.getProperty("line.separator") + System.getProperty("line.separator");
+				getSequenceDisplay().insert(seqFound + solution.getSequence().toString(), 0);
+			}
 			
-			String seqFound = "Best sequence found to repair model " + files[0].getName() + ":"
-					+ System.getProperty("line.separator") + System.getProperty("line.separator");
-			getSequenceDisplay().insert(seqFound + bestSolution.getSequence().toString(), 0);
 			
 			endTime = System.currentTimeMillis();
 		} catch (NoErrorsInModelException e) {

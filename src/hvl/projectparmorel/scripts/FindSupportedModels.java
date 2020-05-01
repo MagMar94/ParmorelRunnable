@@ -24,12 +24,12 @@ import org.eclipse.emf.ecore.resource.Resource;
 import hvl.projectparmorel.ecore.EcoreErrorExtractor;
 import hvl.projectparmorel.ecore.EcoreModel;
 import hvl.projectparmorel.ecore.EcoreModelProcessor;
-import hvl.projectparmorel.general.Error;
-import hvl.projectparmorel.general.ErrorExtractor;
-import hvl.projectparmorel.general.Model;
-import hvl.projectparmorel.general.ModelProcessor;
-import hvl.projectparmorel.general.ModelType;
 import hvl.projectparmorel.knowledge.Knowledge;
+import hvl.projectparmorel.qlearning.Error;
+import hvl.projectparmorel.qlearning.ErrorExtractor;
+import hvl.projectparmorel.qlearning.Model;
+import hvl.projectparmorel.qlearning.ModelProcessor;
+import hvl.projectparmorel.qlearning.ModelType;
 
 public class FindSupportedModels {
 

@@ -2,9 +2,9 @@ package hvl.projectparmorel.modules;
 
 import java.util.List;
 
+import hvl.projectparmorel.ModelFixer;
 import hvl.projectparmorel.ecore.EcoreQModelFixer;
-import hvl.projectparmorel.general.ModelFixer;
-import hvl.projectparmorel.modelrepair.Solution;
+import hvl.projectparmorel.qlearning.QSolution;
 import hvl.projectparmorel.utils.ParmorelUtils;
 
 /**
@@ -24,12 +24,12 @@ public class BestWeightStrategy045 extends Strategy {
 	}
 
 	@Override
-	protected Solution selectSolution(List<Solution> possibleSolutions) {
+	protected QSolution selectSolution(List<QSolution> possibleSolutions) {
 		if(possibleSolutions.isEmpty()) {
 			return null;
 		}
 		
-		Solution optimalSolution = possibleSolutions.get(0);
+		QSolution optimalSolution = possibleSolutions.get(0);
 		
 		for(int i = 1; i < possibleSolutions.size(); i++) {
 			if(possibleSolutions.get(i).getWeight() > optimalSolution.getWeight()) {
