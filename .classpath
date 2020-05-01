@@ -6,6 +6,7 @@
 	<classpathentry kind="src" path="projectparmorel/SimilarityMetamodelsChecker/epsilon"/>
 	<classpathentry kind="src" path="projectparmorel/SimilarityMetamodelsChecker/src"/>
 	<classpathentry kind="src" path="projectparmorel/SimilarityMetamodelsChecker/support"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ModelRepair"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
@@ -18,5 +19,8 @@
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="lib" path="projectparmorel/SimilarityMetamodelsChecker/required/simmetrics_jar_v1_6_2_d07_02_07.jar"/>
 	<classpathentry kind="lib" path="projectparmorel/SimilarityMetamodelsChecker/required/SimMetriToolPlugin.jar"/>
+	<classpathentry kind="lib" path="projectparmorel/libs/epsilon-1.5.1-core.jar"/>
+	<classpathentry kind="lib" path="projectparmorel/libs/epsilon-emf-1.5.1.jar"/>
+	<classpathentry kind="lib" path="projectparmorel/libs/org.eclipse.m2m.atl.emftvm.ant_4.1.0.v201909021645.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
