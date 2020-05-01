@@ -6,7 +6,6 @@
 	<classpathentry kind="src" path="projectparmorel/SimilarityMetamodelsChecker/epsilon"/>
 	<classpathentry kind="src" path="projectparmorel/SimilarityMetamodelsChecker/src"/>
 	<classpathentry kind="src" path="projectparmorel/SimilarityMetamodelsChecker/support"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/ModelRepair"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
