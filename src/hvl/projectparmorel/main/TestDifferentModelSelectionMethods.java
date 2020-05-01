@@ -24,7 +24,7 @@ public class TestDifferentModelSelectionMethods {
 	public static void main(String[] args) {
 		//ParmorelUtils.deleteExistingKnowledge();
 		//differentSelectionMethodsOriginals
-		String originalModelsFolderName = FILE_PREFIX + "maintainability";
+		String originalModelsFolderName = FILE_PREFIX + "differentSelectionMethodsOriginals";
 		File originalModelsFolder = new File(originalModelsFolderName);
 		File[] brokenModels = originalModelsFolder.listFiles();
 		brokenModels = ParmorelUtils.removeFilesThatAreNotEcore(brokenModels);
@@ -36,22 +36,21 @@ public class TestDifferentModelSelectionMethods {
 		}
 		
 		List<Strategy> experiments = new ArrayList<>();
-//		experiments.add(new BestWeightStrategy(fixedModelFolderName));
-//		experiments.add(new ClosestDistanceStrategy(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy(fixedModelFolderName));
+		experiments.add(new ClosestDistanceStrategy(fixedModelFolderName));
 		experiments.add(new MaintainabilityStrategy(fixedModelFolderName));
-	
-//		experiments.add(new BestWeightStrategy02(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy045(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy136(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy15(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy2(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy4(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy02(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy045(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy136(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy15(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy2(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy4(fixedModelFolderName));
 		
 		long startTime = System.currentTimeMillis();
 		for(Strategy experiment : experiments) {
 			long experimentStartTime = System.currentTimeMillis();
 			System.out.println("Starting new experiment: " + experiment.getClass().getName());
-			//ParmorelUtils.deleteExistingKnowledge();
+			ParmorelUtils.deleteExistingKnowledge();
 			experiment.repairModels(brokenModels);
 			experiment.setExperimentTime(System.currentTimeMillis() - experimentStartTime);
 		}
