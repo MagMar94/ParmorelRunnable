@@ -86,11 +86,11 @@ public abstract class Strategy {
 
 			List<Solution> solutions = null;
 			try {
-				ql.fixModel(brokenModels[i]);
+				Solution solution = ql.fixModel(brokenModels[i]);
 				solutions = ql.getPossibleSolutions();
 
 				if (!solutions.isEmpty()) {
-					Solution solution = selectSolution(solutions);
+//					Solution solution = selectSolution(solutions);
 					if (solution != null) {
 						solution.reward(true);
 
