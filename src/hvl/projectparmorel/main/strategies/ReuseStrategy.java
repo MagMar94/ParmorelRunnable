@@ -1,4 +1,4 @@
-package hvl.projectparmorel.modules;
+package hvl.projectparmorel.main.strategies;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,14 +9,14 @@ import hvl.projectparmorel.qlearning.QSolution;
 import hvl.projectparmorel.reward.PreferenceOption;
 
 /**
- * This strategy selects the model with lowest complexity
+ * This strategy selects the model with highest reuse
  * 
  * @author Angela
  */
-public class ComplexityStrategy extends Strategy {
+public class ReuseStrategy extends Strategy {
 
-	public ComplexityStrategy(String fixedModelFolderName) {
-		super(fixedModelFolderName + "/complexity");
+	public ReuseStrategy(String fixedModelFolderName) {
+		super(fixedModelFolderName + "/reuse");
 	}
 
 	@Override
@@ -26,10 +26,10 @@ public class ComplexityStrategy extends Strategy {
 		}
 
 		QSolution optimalSolution = possibleSolutions.get(0);
-		double bestMetric = optimalSolution.calculateComplexity();
+		double bestMetric = optimalSolution.calculateReuse();
 
 		for (int i = 1; i < possibleSolutions.size(); i++) {
-			double metric = possibleSolutions.get(i).calculateComplexity();
+			double metric = possibleSolutions.get(i).calculateReuse();
 			if (!isMeasurable(bestMetric) && isMeasurable(metric)) {
 				bestMetric = metric;
 				optimalSolution = possibleSolutions.get(i);
@@ -65,7 +65,7 @@ public class ComplexityStrategy extends Strategy {
 	@Override
 	protected ModelFixer getModelFixer() {
 		List<PreferenceOption> preferences = new ArrayList<PreferenceOption>();
-		preferences.add(PreferenceOption.PREFER_COMPLEXITY);
+		preferences.add(PreferenceOption.PREFER_REUSE);
 		return new EcoreQModelFixer(preferences);
 	}
 

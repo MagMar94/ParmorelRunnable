@@ -1,18 +1,26 @@
-package hvl.projectparmorel.modules;
+package hvl.projectparmorel.main.strategies;
 
 import java.util.List;
 
+import hvl.projectparmorel.ModelFixer;
+import hvl.projectparmorel.ecore.EcoreQModelFixer;
 import hvl.projectparmorel.qlearning.QSolution;
+import hvl.projectparmorel.utils.ParmorelUtils;
 
 /**
  * This strategy selects the largest weight from all the results.
  *  
  * @author Magnus
  */
-public class BestWeightStrategy extends Strategy {
+public class BestWeightStrategy136 extends Strategy {
 
-	public BestWeightStrategy(String fixedModelFolderName) {
-		super(fixedModelFolderName + "/bestWeight24");
+	public BestWeightStrategy136(String fixedModelFolderName) {
+		super(fixedModelFolderName + "/bestWeight136");
+	}
+	
+	@Override
+	protected ModelFixer getModelFixer() {
+		return new EcoreQModelFixer(ParmorelUtils.generateUserSettings(2));
 	}
 
 	@Override

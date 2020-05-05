@@ -1,4 +1,4 @@
-package hvl.projectparmorel.modules;
+package hvl.projectparmorel.main.strategies;
 
 import java.util.List;
 
@@ -12,10 +12,10 @@ import hvl.projectparmorel.utils.ParmorelUtils;
  *  
  * @author Magnus
  */
-public class BestWeightStrategy2 extends Strategy {
+public class BestWeightStrategy045 extends Strategy {
 
-	public BestWeightStrategy2(String fixedModelFolderName) {
-		super(fixedModelFolderName + "/bestWeight2");
+	public BestWeightStrategy045(String fixedModelFolderName) {
+		super(fixedModelFolderName + "/bestWeight045");
 	}
 	
 	@Override

@@ -1,4 +1,4 @@
-package hvl.projectparmorel.modules;
+package hvl.projectparmorel.main.strategies;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,14 +9,14 @@ import hvl.projectparmorel.qlearning.QSolution;
 import hvl.projectparmorel.reward.PreferenceOption;
 
 /**
- * This strategy selects the model with highest relaxation
+ * This strategy selects the model with lowest maintainability
  * 
  * @author Angela
  */
-public class RelaxationStrategy extends Strategy {
+public class MaintainabilityStrategy extends Strategy {
 
-	public RelaxationStrategy(String fixedModelFolderName) {
-		super(fixedModelFolderName + "/relaxation");
+	public MaintainabilityStrategy(String fixedModelFolderName) {
+		super(fixedModelFolderName + "/maintainability");
 	}
 
 	@Override
@@ -26,23 +26,23 @@ public class RelaxationStrategy extends Strategy {
 		}
 
 		QSolution optimalSolution = possibleSolutions.get(0);
-		double bestMetric = optimalSolution.calculateRelaxation();
+		double bestMaint = optimalSolution.calculateMaintainability();
 
 		for (int i = 1; i < possibleSolutions.size(); i++) {
-			double metric = possibleSolutions.get(i).calculateRelaxation();
-			if (!isMeasurable(bestMetric) && isMeasurable(metric)) {
-				bestMetric = metric;
+			double maint = possibleSolutions.get(i).calculateMaintainability();
+			if (!isMeasurable(bestMaint) && isMeasurable(maint)) {
+				bestMaint = maint;
 				optimalSolution = possibleSolutions.get(i);
-			} else if (isMeasurable(metric)
-					&& ((metric < bestMetric || !isMeasurable(bestMetric)))) {
+			} else if (isMeasurable(maint)
+					&& ((maint < bestMaint || !isMeasurable(bestMaint)))) {
 				optimalSolution = possibleSolutions.get(i);
-				bestMetric = metric;
-			} else if (bestMetric == metric
+				bestMaint = maint;
+			} else if (bestMaint == maint
 					&& optimalSolution.getWeight() > possibleSolutions.get(i).getWeight()) {
 				optimalSolution = possibleSolutions.get(i);
 			}
 		}
-		if (!isMeasurable(bestMetric)) {
+		if (!isMeasurable(bestMaint)) {
 			return null;
 		}
 
@@ -65,7 +65,7 @@ public class RelaxationStrategy extends Strategy {
 	@Override
 	protected ModelFixer getModelFixer() {
 		List<PreferenceOption> preferences = new ArrayList<PreferenceOption>();
-		preferences.add(PreferenceOption.PREFER_RELAXATION);
+		preferences.add(PreferenceOption.PREFER_MAINTAINABILITY);
 		return new EcoreQModelFixer(preferences);
 	}
 
