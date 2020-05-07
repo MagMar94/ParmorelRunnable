@@ -13,8 +13,13 @@ import hvl.projectparmorel.main.strategies.BestWeightStrategy15;
 import hvl.projectparmorel.main.strategies.BestWeightStrategy2;
 import hvl.projectparmorel.main.strategies.BestWeightStrategy4;
 import hvl.projectparmorel.main.strategies.ClosestDistanceStrategy;
+import hvl.projectparmorel.main.strategies.ComplexityCloseDistanceStrategy;
+import hvl.projectparmorel.main.strategies.MaintainabilityCloseDistanceStrategy;
 import hvl.projectparmorel.main.strategies.MaintainabilityStrategy;
+import hvl.projectparmorel.main.strategies.RelaxationCloseDistanceStrategy;
+import hvl.projectparmorel.main.strategies.ReuseCloseDistanceStrategy;
 import hvl.projectparmorel.main.strategies.Strategy;
+import hvl.projectparmorel.main.strategies.UnderstandabilityCloseDistanceStrategy;
 import hvl.projectparmorel.utils.ParmorelUtils;
 
 public class TestDifferentModelSelectionMethods {
@@ -43,6 +48,11 @@ public class TestDifferentModelSelectionMethods {
 //		experiments.add(new BestWeightStrategy15(fixedModelFolderName));
 //		experiments.add(new BestWeightStrategy2(fixedModelFolderName));
 //		experiments.add(new BestWeightStrategy4(fixedModelFolderName));
+		experiments.add(new MaintainabilityCloseDistanceStrategy(fixedModelFolderName));
+		experiments.add(new UnderstandabilityCloseDistanceStrategy(fixedModelFolderName));
+		experiments.add(new ComplexityCloseDistanceStrategy(fixedModelFolderName));
+		experiments.add(new ReuseCloseDistanceStrategy(fixedModelFolderName));
+		experiments.add(new RelaxationCloseDistanceStrategy(fixedModelFolderName));
 		
 		long startTime = System.currentTimeMillis();
 		for(Strategy experiment : experiments) {
