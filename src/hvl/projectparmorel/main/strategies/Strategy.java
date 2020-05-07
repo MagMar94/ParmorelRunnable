@@ -1,4 +1,4 @@
-package hvl.projectparmorel.modules;
+package hvl.projectparmorel.main.strategies;
 
 import java.io.File;
 import java.io.IOException;

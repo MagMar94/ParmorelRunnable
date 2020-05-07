@@ -1,4 +1,4 @@
-package hvl.projectparmorel.modules;
+package hvl.projectparmorel.main.strategies;
 
 import java.util.List;
 
@@ -12,15 +12,15 @@ import hvl.projectparmorel.utils.ParmorelUtils;
  *  
  * @author Magnus
  */
-public class BestWeightStrategy136 extends Strategy {
+public class BestWeightStrategy4 extends Strategy {
 
-	public BestWeightStrategy136(String fixedModelFolderName) {
-		super(fixedModelFolderName + "/bestWeight136");
+	public BestWeightStrategy4(String fixedModelFolderName) {
+		super(fixedModelFolderName + "/bestWeight4");
 	}
 	
 	@Override
 	protected ModelFixer getModelFixer() {
-		return new EcoreQModelFixer(ParmorelUtils.generateUserSettings(2));
+		return new EcoreQModelFixer(ParmorelUtils.generateUserSettings(3));
 	}
 
 	@Override
