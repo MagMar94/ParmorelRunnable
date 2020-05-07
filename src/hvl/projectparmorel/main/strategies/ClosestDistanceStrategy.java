@@ -3,11 +3,11 @@ package hvl.projectparmorel.main.strategies;
 import java.util.ArrayList;
 import java.util.List;
 
-import hvl.projectparmorel.ModelFixer;
-import hvl.projectparmorel.ecore.EcoreQModelFixer;
-import hvl.projectparmorel.exceptions.DistanceUnavailableException;
-import hvl.projectparmorel.qlearning.QSolution;
-import hvl.projectparmorel.reward.PreferenceOption;
+import no.hvl.projectparmorel.ModelFixer;
+import no.hvl.projectparmorel.exceptions.DistanceUnavailableException;
+import no.hvl.projectparmorel.qlearning.QSolution;
+import no.hvl.projectparmorel.qlearning.ecore.EcoreQModelFixer;
+import no.hvl.projectparmorel.qlearning.reward.PreferenceOption;
 
 /**
  * This strategy selects the closest distance from the original. If multiple

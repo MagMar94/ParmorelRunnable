@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import hvl.projectparmorel.knowledge.Knowledge;
-import hvl.projectparmorel.reward.PreferenceOption;
+import no.hvl.projectparmorel.qlearning.knowledge.Knowledge;
+import no.hvl.projectparmorel.qlearning.reward.PreferenceOption;
 
 public class ParmorelUtils {
 

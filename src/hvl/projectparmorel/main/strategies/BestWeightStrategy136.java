@@ -2,10 +2,10 @@ package hvl.projectparmorel.main.strategies;
 
 import java.util.List;
 
-import hvl.projectparmorel.ModelFixer;
-import hvl.projectparmorel.ecore.EcoreQModelFixer;
-import hvl.projectparmorel.qlearning.QSolution;
 import hvl.projectparmorel.utils.ParmorelUtils;
+import no.hvl.projectparmorel.ModelFixer;
+import no.hvl.projectparmorel.qlearning.QSolution;
+import no.hvl.projectparmorel.qlearning.ecore.EcoreQModelFixer;
 
 /**
  * This strategy selects the largest weight from all the results.

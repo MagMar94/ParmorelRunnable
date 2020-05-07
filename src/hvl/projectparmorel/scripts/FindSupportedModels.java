@@ -18,18 +18,19 @@ import javax.swing.JFileChooser;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
+
+import no.hvl.projectparmorel.qlearning.Error;
+import no.hvl.projectparmorel.qlearning.ErrorExtractor;
+import no.hvl.projectparmorel.qlearning.Model;
+import no.hvl.projectparmorel.qlearning.ModelProcessor;
+import no.hvl.projectparmorel.qlearning.ModelType;
+import no.hvl.projectparmorel.qlearning.ecore.EcoreErrorExtractor;
+import no.hvl.projectparmorel.qlearning.ecore.EcoreModel;
+import no.hvl.projectparmorel.qlearning.ecore.EcoreModelProcessor;
+import no.hvl.projectparmorel.qlearning.knowledge.Knowledge;
+
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
-
-import hvl.projectparmorel.ecore.EcoreErrorExtractor;
-import hvl.projectparmorel.ecore.EcoreModel;
-import hvl.projectparmorel.ecore.EcoreModelProcessor;
-import hvl.projectparmorel.knowledge.Knowledge;
-import hvl.projectparmorel.qlearning.Error;
-import hvl.projectparmorel.qlearning.ErrorExtractor;
-import hvl.projectparmorel.qlearning.Model;
-import hvl.projectparmorel.qlearning.ModelProcessor;
-import hvl.projectparmorel.qlearning.ModelType;
 
 public class FindSupportedModels {
 

@@ -2,7 +2,7 @@ package hvl.projectparmorel.main.strategies;
 
 import java.util.List;
 
-import hvl.projectparmorel.qlearning.QSolution;
+import no.hvl.projectparmorel.qlearning.QSolution;
 
 /**
  * This strategy selects the largest weight from all the results.

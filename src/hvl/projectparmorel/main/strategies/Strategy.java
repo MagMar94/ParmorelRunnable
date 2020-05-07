@@ -10,13 +10,13 @@ import java.util.logging.SimpleFormatter;
 
 import org.junit.platform.commons.util.ExceptionUtils;
 
-import hvl.projectparmorel.ModelFixer;
-import hvl.projectparmorel.Solution;
-import hvl.projectparmorel.ecore.EcoreQModelFixer;
-import hvl.projectparmorel.exceptions.NoErrorsInModelException;
-import hvl.projectparmorel.knowledge.Knowledge;
-import hvl.projectparmorel.qlearning.QSolution;
 import hvl.projectparmorel.utils.ParmorelUtils;
+import no.hvl.projectparmorel.ModelFixer;
+import no.hvl.projectparmorel.Solution;
+import no.hvl.projectparmorel.exceptions.NoErrorsInModelException;
+import no.hvl.projectparmorel.qlearning.QSolution;
+import no.hvl.projectparmorel.qlearning.ecore.EcoreQModelFixer;
+import no.hvl.projectparmorel.qlearning.knowledge.Knowledge;
 
 /**
  * The strategy on how to select the solution.

@@ -2,7 +2,7 @@ package hvl.projectparmorel.scripts;
 
 import java.util.List;
 
-import hvl.projectparmorel.qlearning.Error;
+import no.hvl.projectparmorel.qlearning.Error;
 
 class ModelEval implements Evaluation {
 	public final static String CSV_SEPARATION_SIGN = ";";
