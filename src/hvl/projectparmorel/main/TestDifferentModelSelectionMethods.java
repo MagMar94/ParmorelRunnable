@@ -39,15 +39,15 @@ public class TestDifferentModelSelectionMethods {
 		}
 		
 		List<Strategy> experiments = new ArrayList<>();
-//		experiments.add(new BestWeightStrategy(fixedModelFolderName));
-//		experiments.add(new ClosestDistanceStrategy(fixedModelFolderName));
-//		experiments.add(new MaintainabilityStrategy(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy02(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy045(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy136(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy15(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy2(fixedModelFolderName));
-//		experiments.add(new BestWeightStrategy4(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy(fixedModelFolderName));
+		experiments.add(new ClosestDistanceStrategy(fixedModelFolderName));
+		experiments.add(new MaintainabilityStrategy(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy02(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy045(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy136(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy15(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy2(fixedModelFolderName));
+		experiments.add(new BestWeightStrategy4(fixedModelFolderName));
 		experiments.add(new MaintainabilityCloseDistanceStrategy(fixedModelFolderName));
 		experiments.add(new UnderstandabilityCloseDistanceStrategy(fixedModelFolderName));
 		experiments.add(new ComplexityCloseDistanceStrategy(fixedModelFolderName));
